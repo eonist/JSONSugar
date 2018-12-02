@@ -1,6 +1,6 @@
 import Foundation
 
-class JSONAsserter{
+public class JSONAsserter{
     static func isDict(_ json:Any?) -> Bool{
         return JSONParser.dict(json) != nil
     }

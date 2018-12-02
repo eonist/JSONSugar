@@ -2,14 +2,14 @@ import Foundation
 /**
  * TODO: ⚠️️ Investigate how to add bool, look in the api doc maybe?
  */
-enum JSONType {
+public enum JSONType {
     case arr
     case int
     case dict
     case dictArr/*An array of dictionaries*/
     case str
 }
-extension JSONType{
+public extension JSONType{
     static func type(_ json:Any?) -> JSONType{
         switch true{
         case JSONAsserter.isStr(json):

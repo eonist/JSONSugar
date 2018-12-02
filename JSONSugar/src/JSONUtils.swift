@@ -1,10 +1,10 @@
 import Foundation
 
-class JSONUtils{
+public class JSONUtils{
     /**
      * Describer
      */
-    static func describe(_ json:Any?){
+    public static func describe(_ json:Any?){
         if let str = JSONParser.str(json){
             Swift.print("Str: \(str)")
         }else if let int = JSONParser.int(json){
