@@ -20,6 +20,9 @@
 		F1BED60021B40F2E00A0D3D4 /* JSON+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */; };
 		F1BED60121B40F2E00A0D3D4 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */; };
 		F1BED60221B40F2E00A0D3D4 /* JSONAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */; };
+		F1BED65621B42C6700A0D3D4 /* FileSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BED65521B42C6700A0D3D4 /* FileSugar.framework */; };
+		F1BED65821B42C7D00A0D3D4 /* FileSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BED65721B42C7D00A0D3D4 /* FileSugar.framework */; };
+		F1BED65921B42C7D00A0D3D4 /* FileSugar.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = F1BED65721B42C7D00A0D3D4 /* FileSugar.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,7 @@
 			dstSubfolderSpec = 10;
 			files = (
 				F1BED5F321B40ED000A0D3D4 /* JSONSugar.framework in Embed Frameworks */,
+				F1BED65921B42C7D00A0D3D4 /* FileSugar.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -62,6 +66,8 @@
 		F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Extension.swift"; sourceTree = "<group>"; };
 		F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONType.swift; sourceTree = "<group>"; };
 		F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAsserter.swift; sourceTree = "<group>"; };
+		F1BED65521B42C6700A0D3D4 /* FileSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar.framework; path = Carthage/Build/iOS/FileSugar.framework; sourceTree = "<group>"; };
+		F1BED65721B42C7D00A0D3D4 /* FileSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar.framework; path = Carthage/Build/iOS/FileSugar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +76,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1BED5F221B40ED000A0D3D4 /* JSONSugar.framework in Frameworks */,
+				F1BED65821B42C7D00A0D3D4 /* FileSugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +84,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F1BED65621B42C6700A0D3D4 /* FileSugar.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,9 +94,11 @@
 		F1BED5C821B40D7400A0D3D4 = {
 			isa = PBXGroup;
 			children = (
+				F1BED65721B42C7D00A0D3D4 /* FileSugar.framework */,
 				F1BED5D321B40D7400A0D3D4 /* JSONSugarExample */,
 				F1BED5EC21B40ED000A0D3D4 /* JSONSugar */,
 				F1BED5D221B40D7400A0D3D4 /* Products */,
+				F1BED65421B42C6700A0D3D4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -134,6 +144,14 @@
 				F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		F1BED65421B42C6700A0D3D4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1BED65521B42C6700A0D3D4 /* FileSugar.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -419,6 +437,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JSONSugarExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -437,6 +459,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JSONSugarExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -460,6 +486,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JSONSugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -489,6 +519,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
 				INFOPLIST_FILE = JSONSugar/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
