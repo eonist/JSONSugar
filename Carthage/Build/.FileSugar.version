@@ -8,11 +8,11 @@
   "tvOS" : [
 
   ],
-  "commitish" : "5e43692cb56e648926c050a27653347ea424d1cf",
+  "commitish" : "7499ab108d2b92d5c33e7fb4278379c34b4c8e1a",
   "iOS" : [
     {
       "name" : "FileSugar",
-      "hash" : "bbeb9013b2c80190b3c195c1176b180038aae90cebc1eda0caeba2ff3da9a94f"
+      "hash" : "f932c074b1acb368c5673d490df6edd71c8d9c85ece48f58a6bfee9dcc559c4f"
     }
   ]
 }

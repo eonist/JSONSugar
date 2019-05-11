@@ -1,6 +1,6 @@
 import Foundation
 /**
- * TODO: ⚠️️ Investigate how to add bool, look in the api doc maybe?
+ * Fixme: ⚠️️ Investigate how to add bool, look in the api doc maybe?
  */
 public enum JSONType {
     case arr
@@ -9,9 +9,9 @@ public enum JSONType {
     case dictArr/*An array of dictionaries*/
     case str
 }
-public extension JSONType{
-    static func type(_ json:Any?) -> JSONType{
-        switch true{
+extension JSONType {
+    public static func type(_ json: Any?) -> JSONType {
+        switch true {
         case JSONAsserter.isStr(json):
             return .str
         case JSONAsserter.isInt(json):
@@ -23,9 +23,9 @@ public extension JSONType{
         case JSONAsserter.isArr(json):
             return .arr
         default:
-            print("Type not supported: \(Swift.type(of:json))")
-            fatalError("Type not supported: \(Swift.type(of:json))")
-            break;
+            print("Type not supported: \(Swift.type(of: json))")
+            fatalError("Type not supported: \(Swift.type(of: json))")
+//            break
         }
     }
 }
