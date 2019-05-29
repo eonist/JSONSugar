@@ -7,9 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9DF43424229D240200996EE7 /* DecodingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF43422229D240200996EE7 /* DecodingHelpers.swift */; };
 		F1BED5D521B40D7400A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */; };
 		F1BED5D721B40D7400A0D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D621B40D7400A0D3D4 /* ViewController.swift */; };
-		F1BED5DA21B40D7400A0D3D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BED5D821B40D7400A0D3D4 /* Main.storyboard */; };
 		F1BED5DC21B40D7600A0D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BED5DB21B40D7600A0D3D4 /* Assets.xcassets */; };
 		F1BED5DF21B40D7600A0D3D4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1BED5DD21B40D7600A0D3D4 /* LaunchScreen.storyboard */; };
 		F1BED5EF21B40ED000A0D3D4 /* JSONSugar.h in Headers */ = {isa = PBXBuildFile; fileRef = F1BED5ED21B40ED000A0D3D4 /* JSONSugar.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -51,10 +51,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		9DF43422229D240200996EE7 /* DecodingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingHelpers.swift; sourceTree = "<group>"; };
 		F1BED5D121B40D7400A0D3D4 /* JSONSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BED5D621B40D7400A0D3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		F1BED5D921B40D7400A0D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F1BED5DB21B40D7600A0D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BED5DE21B40D7600A0D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1BED5E021B40D7600A0D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -91,6 +91,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9DF43421229D23EF00996EE7 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				9DF43422229D240200996EE7 /* DecodingHelpers.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		F1BED5C821B40D7400A0D3D4 = {
 			isa = PBXGroup;
 			children = (
@@ -116,7 +124,6 @@
 			children = (
 				F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */,
 				F1BED5D621B40D7400A0D3D4 /* ViewController.swift */,
-				F1BED5D821B40D7400A0D3D4 /* Main.storyboard */,
 				F1BED5DB21B40D7600A0D3D4 /* Assets.xcassets */,
 				F1BED5DD21B40D7600A0D3D4 /* LaunchScreen.storyboard */,
 				F1BED5E021B40D7600A0D3D4 /* Info.plist */,
@@ -137,6 +144,7 @@
 		F1BED5F821B40EE100A0D3D4 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9DF43421229D23EF00996EE7 /* common */,
 				F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */,
 				F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */,
 				F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */,
@@ -219,6 +227,7 @@
 				TargetAttributes = {
 					F1BED5D021B40D7400A0D3D4 = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1020;
 					};
 					F1BED5EA21B40ED000A0D3D4 = {
 						CreatedOnToolsVersion = 10.1;
@@ -252,7 +261,6 @@
 			files = (
 				F1BED5DF21B40D7600A0D3D4 /* LaunchScreen.storyboard in Resources */,
 				F1BED5DC21B40D7600A0D3D4 /* Assets.xcassets in Resources */,
-				F1BED5DA21B40D7400A0D3D4 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9DF43424229D240200996EE7 /* DecodingHelpers.swift in Sources */,
 				F1BED5FE21B40F2E00A0D3D4 /* JSONParser.swift in Sources */,
 				F1BED60221B40F2E00A0D3D4 /* JSONAsserter.swift in Sources */,
 				F1BED60121B40F2E00A0D3D4 /* JSONType.swift in Sources */,
@@ -335,14 +344,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		F1BED5D821B40D7400A0D3D4 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				F1BED5D921B40D7400A0D3D4 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		F1BED5DD21B40D7600A0D3D4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -487,7 +488,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.JSONSugarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -509,7 +510,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = io.github.futurelab.JSONSugarExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 4.2;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

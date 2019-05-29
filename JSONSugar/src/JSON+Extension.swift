@@ -1,12 +1,18 @@
 import Foundation
 
-/*Global generic decode method for Decodable*/
+/**
+ * Global generic decode method for Decodable
+ * Fixme: ⚠️️ write example
+ */
 public func decode<T: Decodable>(data: Data) throws -> T {
     let decoder = JSONDecoder()
     return try decoder.decode(T.self, from: data)
 }
 
-/*Encodable Extension*/
+/**
+ * Encodable Extension
+ * Fixme: ⚠️️ write example
+ */
 extension Encodable {
     public func encode() throws -> Data {
         let encoder = JSONEncoder()
