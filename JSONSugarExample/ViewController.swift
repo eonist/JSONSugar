@@ -48,8 +48,8 @@ struct Whale: Decodable {
  * let region2: Region = .init(language: Spanish", artist:"Shakira", album:"Magia"))
  * let featured: Featured = .init(regions: [region1,region2])
  */
-struct FeaturedData : Codable{
-    struct Region : Codable {
+struct FeaturedData: Codable {
+    struct Region: Codable {
         let language: String
         let artist: String
         let album: String
