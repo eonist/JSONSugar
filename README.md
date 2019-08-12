@@ -56,7 +56,7 @@ let jsonStr = """
 """
 guard let jsonData = jsonStr.data(using: .utf8) else { fatalError("unable to convert string to data") }
 do {
-   guard let featuredData: FeaturedData = try decode(data: jsonData) else { fatalError("unable to decode whale") }//From json to struct {
+   guard let featuredData: FeaturedData = try decode(data: jsonData) else { fatalError("unable to decode json") }//From json to struct {
     featuredData.regions.forEach {
         Swift.print("$0.album:  \($0.album)")// Lemonade, Escape, Magia
     }
