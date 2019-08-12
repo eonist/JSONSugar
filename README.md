@@ -5,6 +5,8 @@ json sugar for iOS
 ### Basic example:
 
 ```swift
+import JsonSugar
+
 let jsonStr: String = """
 {
     "name": "The Whale",
@@ -41,6 +43,8 @@ Swift.print("whale.whaleInfo.color:  \(whale.whaleInfo.color)") // blue
 ## Json-Array example:
 
 ```swift
+import JsonSugar
+
 let jsonStr = """
 {
     "regions" : [
