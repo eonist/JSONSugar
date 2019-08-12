@@ -80,6 +80,31 @@ struct FeaturedData : Codable{
 }
 ```
 
+### Simple array:
+```swift
+let jsonStr = """
+[
+    {"language":"English", "artist":"Beyonce", "album":"Lemonade"},
+    {"language":"Portuguese", "artist":"Enrique Iglesias", "album":"Escape"},
+    {"language":"Spanish", "artist":"Shakira", "album":"Magia"}
+]
+"""
+guard let jsonData = jsonStr.data(using: .utf8) else { fatalError("unable to convert string to data") }
+do {
+   guard let regions: [Region] = try decode(data: jsonData) else { fatalError("unable to decode json") }//From json to struct {
+    regions.forEach {
+        Swift.print("$0.album:  \($0.album)")// Lemonade, Escape, Magia
+    }
+} catch let jsonErr {
+    print("Error serializing json", jsonErr)
+}
+struct Region : Codable {
+    let language: String
+    let artist: String
+    let album: String
+}
+```
+
 ### Todo:
 - Add basic example ✅
 - Use programatic app code
