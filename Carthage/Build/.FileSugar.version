@@ -1,18 +1,10 @@
 {
+  "commitish" : "50cb9f03e75cfd3c415133049162a3905cabe0d9",
   "Mac" : [
-
-  ],
-  "watchOS" : [
-
-  ],
-  "tvOS" : [
-
-  ],
-  "commitish" : "7499ab108d2b92d5c33e7fb4278379c34b4c8e1a",
-  "iOS" : [
     {
-      "name" : "FileSugar",
-      "hash" : "f932c074b1acb368c5673d490df6edd71c8d9c85ece48f58a6bfee9dcc559c4f"
+      "name" : "FileSugar_macOS",
+      "hash" : "392bc617379739ecbf5d56fe822b1d26bafb1365ce4b05048d6e4a91e6c6d547",
+      "swiftToolchainVersion" : "5.0.1 (swiftlang-1001.0.82.4 clang-1001.0.46.5)"
     }
   ]
 }
