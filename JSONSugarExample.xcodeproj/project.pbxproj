@@ -15,6 +15,8 @@
 		9D1A3B70231D0EB1009E2B77 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */; };
 		9D1A3B71231D0EB1009E2B77 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */; };
 		9D1A3B73231D0ED8009E2B77 /* FileSugar_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1A3B72231D0ED8009E2B77 /* FileSugar_macOS.framework */; };
+		9D4A034C231FA72E005C9B68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A034B231FA72E005C9B68 /* Extensions.swift */; };
+		9D4A034D231FA7B5005C9B68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A034B231FA72E005C9B68 /* Extensions.swift */; };
 		9DF43424229D240200996EE7 /* DecodingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF43422229D240200996EE7 /* DecodingHelpers.swift */; };
 		F1BED5D521B40D7400A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */; };
 		F1BED5D721B40D7400A0D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D621B40D7400A0D3D4 /* ViewController.swift */; };
@@ -63,6 +65,7 @@
 		9D1A3B63231D0DD2009E2B77 /* JSONSugarMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONSugarMacOS.h; sourceTree = "<group>"; };
 		9D1A3B64231D0DD2009E2B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9D1A3B72231D0ED8009E2B77 /* FileSugar_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar_macOS.framework; path = Carthage/Build/Mac/FileSugar_macOS.framework; sourceTree = "<group>"; };
+		9D4A034B231FA72E005C9B68 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		9DF43422229D240200996EE7 /* DecodingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingHelpers.swift; sourceTree = "<group>"; };
 		F1BED5D121B40D7400A0D3D4 /* JSONSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				9DF43422229D240200996EE7 /* DecodingHelpers.swift */,
+				9D4A034B231FA72E005C9B68 /* Extensions.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -390,6 +394,7 @@
 				9D1A3B6E231D0EB1009E2B77 /* JSONAsserter.swift in Sources */,
 				9D1A3B6F231D0EB1009E2B77 /* JSONParser.swift in Sources */,
 				9D1A3B6D231D0EB1009E2B77 /* JSON+Extension.swift in Sources */,
+				9D4A034D231FA7B5005C9B68 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +417,7 @@
 				F1BED60121B40F2E00A0D3D4 /* JSONType.swift in Sources */,
 				F1BED60021B40F2E00A0D3D4 /* JSON+Extension.swift in Sources */,
 				F1BED5FF21B40F2E00A0D3D4 /* JSONUtils.swift in Sources */,
+				9D4A034C231FA72E005C9B68 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
