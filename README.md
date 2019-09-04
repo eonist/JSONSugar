@@ -4,6 +4,15 @@ json sugar for iOS and mac
 
 <img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/jsonlib.svg">
 
+
+### One-liner examples:
+
+```swift
+let strings: [String]? = try? "["a","b","c"]".data(using: .utf8)?.decode()
+let strings: [String]? = try? "["a","b","c"]".decode()
+let strings: [String]? = try? FileParser.data(filePath: filePath)?.decode() else { fatalError("Err") } // Remember to import FileSugar
+```
+
 ### Basic example:
 
 ```swift

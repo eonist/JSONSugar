@@ -12,7 +12,7 @@
 		9D1A3B6D231D0EB1009E2B77 /* JSON+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */; };
 		9D1A3B6E231D0EB1009E2B77 /* JSONAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */; };
 		9D1A3B6F231D0EB1009E2B77 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */; };
-		9D1A3B70231D0EB1009E2B77 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */; };
+		9D1A3B70231D0EB1009E2B77 /* JSON+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSON+Type.swift */; };
 		9D1A3B71231D0EB1009E2B77 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */; };
 		9D1A3B73231D0ED8009E2B77 /* FileSugar_macOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9D1A3B72231D0ED8009E2B77 /* FileSugar_macOS.framework */; };
 		9D4A034C231FA72E005C9B68 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A034B231FA72E005C9B68 /* Extensions.swift */; };
@@ -28,7 +28,7 @@
 		F1BED5FE21B40F2E00A0D3D4 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */; };
 		F1BED5FF21B40F2E00A0D3D4 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */; };
 		F1BED60021B40F2E00A0D3D4 /* JSON+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */; };
-		F1BED60121B40F2E00A0D3D4 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */; };
+		F1BED60121B40F2E00A0D3D4 /* JSON+Type.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSON+Type.swift */; };
 		F1BED60221B40F2E00A0D3D4 /* JSONAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */; };
 		F1BED65621B42C6700A0D3D4 /* FileSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BED65521B42C6700A0D3D4 /* FileSugar.framework */; };
 		F1BED65821B42C7D00A0D3D4 /* FileSugar.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F1BED65721B42C7D00A0D3D4 /* FileSugar.framework */; };
@@ -79,7 +79,7 @@
 		F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
 		F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Extension.swift"; sourceTree = "<group>"; };
-		F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONType.swift; sourceTree = "<group>"; };
+		F1BED5FC21B40F2E00A0D3D4 /* JSON+Type.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Type.swift"; sourceTree = "<group>"; };
 		F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAsserter.swift; sourceTree = "<group>"; };
 		F1BED65521B42C6700A0D3D4 /* FileSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar.framework; path = Carthage/Build/iOS/FileSugar.framework; sourceTree = "<group>"; };
 		F1BED65721B42C7D00A0D3D4 /* FileSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar.framework; path = Carthage/Build/iOS/FileSugar.framework; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 				F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */,
 				F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */,
 				F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */,
-				F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */,
+				F1BED5FC21B40F2E00A0D3D4 /* JSON+Type.swift */,
 				F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */,
 			);
 			path = src;
@@ -228,6 +228,7 @@
 				9D1A3B5D231D0DD1009E2B77 /* Sources */,
 				9D1A3B5E231D0DD1009E2B77 /* Frameworks */,
 				9D1A3B5F231D0DD1009E2B77 /* Resources */,
+				9D4A034E231FB6B2005C9B68 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -284,7 +285,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1010;
-				LastUpgradeCheck = 1010;
+				LastUpgradeCheck = 1020;
 				ORGANIZATIONNAME = FutureLab;
 				TargetAttributes = {
 					9D1A3B60231D0DD1009E2B77 = {
@@ -347,6 +348,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		9D4A034E231FB6B2005C9B68 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
 		F1CE268222854AAE00441836 /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -388,7 +406,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9D1A3B70231D0EB1009E2B77 /* JSONType.swift in Sources */,
+				9D1A3B70231D0EB1009E2B77 /* JSON+Type.swift in Sources */,
 				9D1A3B71231D0EB1009E2B77 /* JSONUtils.swift in Sources */,
 				9D1A3B6C231D0EB1009E2B77 /* DecodingHelpers.swift in Sources */,
 				9D1A3B6E231D0EB1009E2B77 /* JSONAsserter.swift in Sources */,
@@ -414,7 +432,7 @@
 				9DF43424229D240200996EE7 /* DecodingHelpers.swift in Sources */,
 				F1BED5FE21B40F2E00A0D3D4 /* JSONParser.swift in Sources */,
 				F1BED60221B40F2E00A0D3D4 /* JSONAsserter.swift in Sources */,
-				F1BED60121B40F2E00A0D3D4 /* JSONType.swift in Sources */,
+				F1BED60121B40F2E00A0D3D4 /* JSON+Type.swift in Sources */,
 				F1BED60021B40F2E00A0D3D4 /* JSON+Extension.swift in Sources */,
 				F1BED5FF21B40F2E00A0D3D4 /* JSONUtils.swift in Sources */,
 				9D4A034C231FA72E005C9B68 /* Extensions.swift in Sources */,
@@ -446,7 +464,7 @@
 		9D1A3B66231D0DD2009E2B77 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -481,7 +499,7 @@
 		9D1A3B67231D0DD2009E2B77 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "Mac Developer";
+				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
