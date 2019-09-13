@@ -1,5 +1,4 @@
 import Foundation
-
 /**
  * Global generic decode method for Decodable
  * ## Examples:
@@ -8,17 +7,19 @@ import Foundation
  * guard let strings: [String] = try? decode(data: jsonData) else { fatalError("unable to decode jsonData") }
  */
 public func decode<T: Decodable>(data: Data) throws -> T {
-    let decoder = JSONDecoder()
-    return try decoder.decode(T.self, from: data)
+   let decoder = JSONDecoder()
+   return try decoder.decode(T.self, from: data)
 }
 /**
  * Encodable Extension
- * Fixme: ⚠️️ write example
  */
 extension Encodable {
-    public func encode() throws -> Data {
-        let encoder = JSONEncoder()
-        encoder.outputFormatting = .prettyPrinted
-        return try encoder.encode(self)
-    }
+   /**
+    * Fixme: ⚠️️ write example
+    */
+   public func encode() throws -> Data {
+      let encoder = JSONEncoder()
+      encoder.outputFormatting = .prettyPrinted
+      return try encoder.encode(self)
+   }
 }

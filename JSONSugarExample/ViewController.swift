@@ -1,6 +1,8 @@
 import UIKit
 import JSONSugar
-
+/**
+ * - Fixme: ⚠️️ Move this into a Unit test
+ */
 class MainVC: UIViewController {
     let jsonStr = """
         {
@@ -28,7 +30,6 @@ class MainVC: UIViewController {
         test2()
     }
 }
-
 /**
  * Data structure
  */

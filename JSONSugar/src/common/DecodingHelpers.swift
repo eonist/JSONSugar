@@ -11,6 +11,9 @@ public protocol DecodingContainerTransformer {
  * Makes the code more reusable/modular
  */
 extension KeyedDecodingContainer {
+   /**
+    * Fixme: ⚠️️ write doc
+    */
    public func decode<Transformer: DecodingContainerTransformer>(key: Key, transformer: Transformer) throws -> Transformer.DecodingOutput where Transformer.DecodingInput: Decodable {
       return try transformer.decode(input: try decode(Transformer.DecodingInput.self, forKey: key))
    }
