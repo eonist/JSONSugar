@@ -3,10 +3,18 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F149650C24322C78008C1847 /* FileSugar in Frameworks */ = {isa = PBXBuildFile; productRef = F149650B24322C78008C1847 /* FileSugar */; };
+		F149651724322CA9008C1847 /* JSONAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149650F24322CA9008C1847 /* JSONAsserter.swift */; };
+		F149651824322CA9008C1847 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149651024322CA9008C1847 /* JSONUtils.swift */; };
+		F149651924322CA9008C1847 /* JSON+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149651124322CA9008C1847 /* JSON+Extension.swift */; };
+		F149651A24322CA9008C1847 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149651324322CA9008C1847 /* Extensions.swift */; };
+		F149651B24322CA9008C1847 /* DecodingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149651424322CA9008C1847 /* DecodingHelpers.swift */; };
+		F149651C24322CA9008C1847 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149651524322CA9008C1847 /* JSONType.swift */; };
+		F149651D24322CA9008C1847 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F149651624322CA9008C1847 /* JSONParser.swift */; };
 		F1BED5D521B40D7400A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */; };
 		F1BED5D721B40D7400A0D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D621B40D7400A0D3D4 /* ViewController.swift */; };
 		F1BED5DC21B40D7600A0D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BED5DB21B40D7600A0D3D4 /* Assets.xcassets */; };
@@ -27,6 +35,13 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		F149650F24322CA9008C1847 /* JSONAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAsserter.swift; sourceTree = "<group>"; };
+		F149651024322CA9008C1847 /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
+		F149651124322CA9008C1847 /* JSON+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Extension.swift"; sourceTree = "<group>"; };
+		F149651324322CA9008C1847 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		F149651424322CA9008C1847 /* DecodingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingHelpers.swift; sourceTree = "<group>"; };
+		F149651524322CA9008C1847 /* JSONType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONType.swift; sourceTree = "<group>"; };
+		F149651624322CA9008C1847 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 		F1BED5D121B40D7400A0D3D4 /* JSONSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BED5D621B40D7400A0D3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,15 +55,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F149650C24322C78008C1847 /* FileSugar in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		F149650D24322CA9008C1847 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				F149650E24322CA9008C1847 /* JSONSugar */,
+			);
+			path = Sources;
+			sourceTree = "<group>";
+		};
+		F149650E24322CA9008C1847 /* JSONSugar */ = {
+			isa = PBXGroup;
+			children = (
+				F149650F24322CA9008C1847 /* JSONAsserter.swift */,
+				F149651024322CA9008C1847 /* JSONUtils.swift */,
+				F149651124322CA9008C1847 /* JSON+Extension.swift */,
+				F149651224322CA9008C1847 /* common */,
+				F149651524322CA9008C1847 /* JSONType.swift */,
+				F149651624322CA9008C1847 /* JSONParser.swift */,
+			);
+			path = JSONSugar;
+			sourceTree = "<group>";
+		};
+		F149651224322CA9008C1847 /* common */ = {
+			isa = PBXGroup;
+			children = (
+				F149651324322CA9008C1847 /* Extensions.swift */,
+				F149651424322CA9008C1847 /* DecodingHelpers.swift */,
+			);
+			path = common;
+			sourceTree = "<group>";
+		};
 		F1BED5C821B40D7400A0D3D4 = {
 			isa = PBXGroup;
 			children = (
+				F149650D24322CA9008C1847 /* Sources */,
 				F1BED5D321B40D7400A0D3D4 /* JSONSugarExample */,
 				F1BED5D221B40D7400A0D3D4 /* Products */,
 				F1BED65421B42C6700A0D3D4 /* Frameworks */,
@@ -100,6 +147,9 @@
 			dependencies = (
 			);
 			name = JSONSugarExample;
+			packageProductDependencies = (
+				F149650B24322C78008C1847 /* FileSugar */,
+			);
 			productName = JSONSugarExample;
 			productReference = F1BED5D121B40D7400A0D3D4 /* JSONSugarExample.app */;
 			productType = "com.apple.product-type.application";
@@ -129,6 +179,9 @@
 				Base,
 			);
 			mainGroup = F1BED5C821B40D7400A0D3D4;
+			packageReferences = (
+				F149650A24322C78008C1847 /* XCRemoteSwiftPackageReference "FileSugar" */,
+			);
 			productRefGroup = F1BED5D221B40D7400A0D3D4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,6 +229,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1BED5D721B40D7400A0D3D4 /* ViewController.swift in Sources */,
+				F149651A24322CA9008C1847 /* Extensions.swift in Sources */,
+				F149651D24322CA9008C1847 /* JSONParser.swift in Sources */,
+				F149651824322CA9008C1847 /* JSONUtils.swift in Sources */,
+				F149651724322CA9008C1847 /* JSONAsserter.swift in Sources */,
+				F149651B24322CA9008C1847 /* DecodingHelpers.swift in Sources */,
+				F149651C24322CA9008C1847 /* JSONType.swift in Sources */,
+				F149651924322CA9008C1847 /* JSON+Extension.swift in Sources */,
 				F1BED5D521B40D7400A0D3D4 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,6 +428,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F149650A24322C78008C1847 /* XCRemoteSwiftPackageReference "FileSugar" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/eonist/FileSugar.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F149650B24322C78008C1847 /* FileSugar */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F149650A24322C78008C1847 /* XCRemoteSwiftPackageReference "FileSugar" */;
+			productName = FileSugar;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F1BED5C921B40D7400A0D3D4 /* Project object */;
 }
