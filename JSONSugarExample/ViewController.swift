@@ -1,5 +1,4 @@
 import UIKit
-import JSONSugar
 /**
  * - Fixme: ⚠️️ Move this into a Unit test
  */

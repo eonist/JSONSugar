@@ -1,7 +1,6 @@
 import Foundation
-
 /**
- * - Fixme: See TreeConverter.tree(json) for how you can convert json into data object you can more easily traverse, you can then do JSON -> Tree -> XML
+ * - Fixme: ⚠️️ See TreeConverter.tree(json) for how you can convert json into data object you can more easily traverse, you can then do JSON -> Tree -> XML
  * - Fixme: ⚠️️ You can also look at the XML classes and reflection classes for how to make more json <-> convert methods
  * - Important. ⚠️️ See string extension "".json for json serilization from string and data
  */
@@ -10,7 +9,7 @@ public class JSONParser {
     * Array with any
     */
    public static func arr(_ json: Any?) -> [Any]? {
-      return json as? [Any]
+      json as? [Any]
    }
    /**
     * Dict
@@ -19,19 +18,19 @@ public class JSONParser {
     * - Fixme: ⚠️️ use generics on this. See DictParser etc
     */
    public static func dict(_ json: Any?) -> [String: Any]? {
-      return json as? [String: Any]
+      json as? [String: Any]
    }
    /**
     * Returns an Int if the json is of type Int
     */
    public static func int(_ json: Any?) -> Int? {
-      return json as? Int
+      json as? Int
    }
    /**
     * Returns an String if the json is of type String
     */
    public static func str(_ json: Any?) -> String? {
-      return json as? String
+      json as? String
    }
    /**
     * Array of dictionaries
@@ -39,7 +38,7 @@ public class JSONParser {
     * JSONParser.dictArr("[{\"title\": \"doctor\"}]".json)?.forEach { print("\(JSONParser.dict($0)?["title"])") } //doctor
     */
    public static func dictArr(_ json: Any?) -> [[String: Any]]? {
-      return json as? [[String: Any]]
+      json as? [[String: Any]]
    }
    /**
     * Converts json string to json object
