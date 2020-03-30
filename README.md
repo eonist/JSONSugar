@@ -4,16 +4,18 @@ json sugar for iOS and mac
 
 <img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/jsonlib.svg">
 
+### Installation
+- SPM: `.package(url: "https://github.com/eonist/JSONSugar.git", .branch("master"))`
 
-### One-liner examples:
+### Examples: (One-liner )
 
 ```swift
 let strings: [String]? = try? "["a","b","c"]".data(using: .utf8)?.decode()
 let strings: [String]? = try? "["a","b","c"]".decode()
-let strings: [String]? = try? FileParser.data(filePath: filePath)?.decode() else { fatalError("Err") } // Remember to import FileSugar
+let strings: [String]? = try? FileParser.data(filePath: filePath)?.decode() else { fatalError("Err") }
 ```
 
-### Basic example:
+### Example: (Basic)
 
 ```swift
 import JsonSugar

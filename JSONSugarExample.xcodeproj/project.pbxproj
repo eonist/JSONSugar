@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F14964D524320F6A008C1847 /* DecodingHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9DF43422229D240200996EE7 /* DecodingHelpers.swift */; };
-		F14964D624320F6A008C1847 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9D4A034B231FA72E005C9B68 /* Extensions.swift */; };
-		F14964D724320F6A008C1847 /* JSON+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */; };
-		F14964D824320F6A008C1847 /* JSONAsserter.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */; };
-		F14964D924320F6A008C1847 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */; };
-		F14964DA24320F6A008C1847 /* JSONType.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */; };
-		F14964DB24320F6A008C1847 /* JSONUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */; };
 		F1BED5D521B40D7400A0D3D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */; };
 		F1BED5D721B40D7400A0D3D4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1BED5D621B40D7400A0D3D4 /* ViewController.swift */; };
 		F1BED5DC21B40D7600A0D3D4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F1BED5DB21B40D7600A0D3D4 /* Assets.xcassets */; };
@@ -34,25 +27,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		9D1A3B63231D0DD2009E2B77 /* JSONSugarMacOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONSugarMacOS.h; sourceTree = "<group>"; };
-		9D1A3B64231D0DD2009E2B77 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9D1A3B72231D0ED8009E2B77 /* FileSugar_macOS.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar_macOS.framework; path = Carthage/Build/Mac/FileSugar_macOS.framework; sourceTree = "<group>"; };
-		9D4A034B231FA72E005C9B68 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		9DF43422229D240200996EE7 /* DecodingHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DecodingHelpers.swift; sourceTree = "<group>"; };
 		F1BED5D121B40D7400A0D3D4 /* JSONSugarExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JSONSugarExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1BED5D421B40D7400A0D3D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1BED5D621B40D7400A0D3D4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F1BED5DB21B40D7600A0D3D4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F1BED5DE21B40D7600A0D3D4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F1BED5E021B40D7600A0D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1BED5ED21B40ED000A0D3D4 /* JSONSugar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JSONSugar.h; sourceTree = "<group>"; };
-		F1BED5EE21B40ED000A0D3D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
-		F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONUtils.swift; sourceTree = "<group>"; };
-		F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "JSON+Extension.swift"; sourceTree = "<group>"; };
-		F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONType.swift; sourceTree = "<group>"; };
-		F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONAsserter.swift; sourceTree = "<group>"; };
-		F1BED65521B42C6700A0D3D4 /* FileSugar.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FileSugar.framework; path = Carthage/Build/iOS/FileSugar.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,30 +46,10 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		9D1A3B62231D0DD2009E2B77 /* JSONSugarMacOS */ = {
-			isa = PBXGroup;
-			children = (
-				9D1A3B63231D0DD2009E2B77 /* JSONSugarMacOS.h */,
-				9D1A3B64231D0DD2009E2B77 /* Info.plist */,
-			);
-			path = JSONSugarMacOS;
-			sourceTree = "<group>";
-		};
-		9DF43421229D23EF00996EE7 /* common */ = {
-			isa = PBXGroup;
-			children = (
-				9DF43422229D240200996EE7 /* DecodingHelpers.swift */,
-				9D4A034B231FA72E005C9B68 /* Extensions.swift */,
-			);
-			path = common;
-			sourceTree = "<group>";
-		};
 		F1BED5C821B40D7400A0D3D4 = {
 			isa = PBXGroup;
 			children = (
 				F1BED5D321B40D7400A0D3D4 /* JSONSugarExample */,
-				F1BED5EC21B40ED000A0D3D4 /* JSONSugar */,
-				9D1A3B62231D0DD2009E2B77 /* JSONSugarMacOS */,
 				F1BED5D221B40D7400A0D3D4 /* Products */,
 				F1BED65421B42C6700A0D3D4 /* Frameworks */,
 			);
@@ -115,34 +75,9 @@
 			path = JSONSugarExample;
 			sourceTree = "<group>";
 		};
-		F1BED5EC21B40ED000A0D3D4 /* JSONSugar */ = {
-			isa = PBXGroup;
-			children = (
-				F1BED5ED21B40ED000A0D3D4 /* JSONSugar.h */,
-				F1BED5F821B40EE100A0D3D4 /* src */,
-				F1BED5EE21B40ED000A0D3D4 /* Info.plist */,
-			);
-			path = JSONSugar;
-			sourceTree = "<group>";
-		};
-		F1BED5F821B40EE100A0D3D4 /* src */ = {
-			isa = PBXGroup;
-			children = (
-				9DF43421229D23EF00996EE7 /* common */,
-				F1BED5FB21B40F2E00A0D3D4 /* JSON+Extension.swift */,
-				F1BED5FD21B40F2E00A0D3D4 /* JSONAsserter.swift */,
-				F1BED5F921B40F2D00A0D3D4 /* JSONParser.swift */,
-				F1BED5FC21B40F2E00A0D3D4 /* JSONType.swift */,
-				F1BED5FA21B40F2E00A0D3D4 /* JSONUtils.swift */,
-			);
-			path = src;
-			sourceTree = "<group>";
-		};
 		F1BED65421B42C6700A0D3D4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9D1A3B72231D0ED8009E2B77 /* FileSugar_macOS.framework */,
-				F1BED65521B42C6700A0D3D4 /* FileSugar.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -240,15 +175,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F14964D524320F6A008C1847 /* DecodingHelpers.swift in Sources */,
 				F1BED5D721B40D7400A0D3D4 /* ViewController.swift in Sources */,
-				F14964D924320F6A008C1847 /* JSONParser.swift in Sources */,
 				F1BED5D521B40D7400A0D3D4 /* AppDelegate.swift in Sources */,
-				F14964DB24320F6A008C1847 /* JSONUtils.swift in Sources */,
-				F14964D724320F6A008C1847 /* JSON+Extension.swift in Sources */,
-				F14964DA24320F6A008C1847 /* JSONType.swift in Sources */,
-				F14964D824320F6A008C1847 /* JSONAsserter.swift in Sources */,
-				F14964D624320F6A008C1847 /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
