@@ -69,4 +69,16 @@ public class JSONParser {
          return nil
       }
    }
+   /**
+    * Converts dictionary-array to JSON-string (See readme for example)
+    */
+   public static func str<Key, Value>(dictArr: [[Key: Value]]) -> String? {
+      do {
+         let jsonData: Data = try JSONSerialization.data(withJSONObject: dictArr, options: .prettyPrinted)// here "jsonData" is the dictionary encoded in JSON data
+         return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
+      } catch {
+         print(error.localizedDescription)
+         return nil
+      }
+   }
 }

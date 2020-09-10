@@ -118,6 +118,28 @@ struct Region : Codable {
 }
 ```
 
+### Dict Example
+```swift
+guard let jsonStr: String = JSONParser.str(dict: ["2": "B", "1": "A", "3": ["1": true]]) else { Swift.print("err Dict -> json-str"); return }
+guard let json = JSONParser.json(jsonStr) else { Swift.print("err json-str -> json"); return }
+guard let dict: [String: Any] = JSONParser.dict(json) else { Swift.print("err json -> Dict"); return }// Output: doctor
+let val = dict["1"]
+Swift.print("val:  \(val)") // A
+```
+
+### Dictionary Array example:
+```swift
+let dictA: [String: Any] = ["3": ["1": true]]
+let dictB: [String: Any] = ["2": "B", "1": "A"]
+guard let jsonStr: String = JSONParser.str(dictArr: [dictA, dictB]) else { Swift.print("err Dict -> json-str"); return }
+Swift.print("jsonStr:  \(jsonStr)")
+guard let json = JSONParser.json(jsonStr) else { Swift.print("err json-str -> json"); return }
+guard let dictArr = JSONParser.dictArr(json) else { Swift.print("err json -> dictArr"); return }// Output: doctor
+Swift.print("arr.count:  \(dictArr.count)") //
+let val = dictArr[1]["1"]
+Swift.print("val:  \(val)") // A
+```
+
 ### Todo:
 - Add basic example ✅
 - Use programatic app code
