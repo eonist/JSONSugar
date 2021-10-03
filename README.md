@@ -139,6 +139,19 @@ Swift.print("arr.count:  \(dictArr.count)") //
 let val = dictArr[1]["1"]
 Swift.print("val:  \(val)") // A
 ```
+### Struct and dictionary:
+
+```swift
+struct Job: Codable, Equatable {
+   let number: Int
+   let name: String
+   let client: String
+}
+let job: Job = .init(number: 1234, name: "Awards Ceremony", client: "ACME Productions")
+let dict: [String: Any] = job.dict ?? [:]
+let clone = try? Job(dict: dict)
+print("\(job == clone ? "✅" : "🚫")") // ✅
+```
 
 ### Todo:
 - Add basic example ✅
