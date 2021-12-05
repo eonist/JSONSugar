@@ -18,7 +18,7 @@ extension JSONType {
       case JSONAsserter.isDictArr(json): return .dictArr
       case JSONAsserter.isArr(json): return .arr
       default:
-         Swift print("Type not supported: \(Swift.type(of: json))")
+         Swift.print("Type not supported: \(Swift.type(of: json))")
          return nil
       }
    }
