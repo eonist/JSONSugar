@@ -20,7 +20,7 @@ public class JSONUtils {
          Swift.print("Arr.count: " + "\(arr.count)")
          arr.forEach { describe($0) }
       } else {
-         fatalError("Type not supported: \(type(of: json)) type \(String(describing: JSONType.type(json)))")
+         Swift.print("⚠️️ Type not supported: \(type(of: json)) type \(String(describing: JSONType.type(json)))")
       }
    }
 }

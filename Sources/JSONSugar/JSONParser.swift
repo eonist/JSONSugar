@@ -1,7 +1,5 @@
 import Foundation
 /**
- * - Fixme: ⚠️️ See TreeConverter.tree(json) for how you can convert json into data object you can more easily traverse, you can then do JSON -> Tree -> XML
- * - Fixme: ⚠️️ You can also look at the XML classes and reflection classes for how to make more json <-> convert methods
  * - Important. ⚠️️ See string extension "".json for json serilization from string and data
  */
 public class JSONParser {
@@ -49,8 +47,9 @@ public class JSONParser {
       guard let data: Data = str.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
       if let json: Any = try? JSONSerialization.jsonObject(with: data, options: []) {
          return json
-      }else {
-         fatalError("JSON is format wrongly: \(str)")
+      } else {
+         Swift.print("⚠️️ JSON is format wrongly: \(str)")
+         return nil
       }
    }
    /**
@@ -65,7 +64,7 @@ public class JSONParser {
          let jsonData: Data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)// here "jsonData" is the dictionary encoded in JSON data
          return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
       } catch {
-         print(error.localizedDescription)
+         Swift.print(error.localizedDescription)
          return nil
       }
    }
@@ -77,7 +76,7 @@ public class JSONParser {
          let jsonData: Data = try JSONSerialization.data(withJSONObject: dictArr, options: .prettyPrinted)// here "jsonData" is the dictionary encoded in JSON data
          return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
       } catch {
-         print(error.localizedDescription)
+         Swift.print(error.localizedDescription)
          return nil
       }
    }
