@@ -23,4 +23,30 @@ public class JSONUtils {
          Swift.print("⚠️️ Type not supported: \(type(of: json)) type \(String(describing: JSONType.type(json)))")
       }
    }
+   /**
+    * Convert data to JSON
+    * - Fixme: ⚠️️ add doc
+    * - Note: This work even if type isn't known. So more robust in some cases
+    */
+   public static func dataToJSON(data: Data) -> Any? {
+      do {
+         return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+      } catch let myJSONError {
+         print(myJSONError)
+      }
+      return nil
+   }
+   /**
+    * Convert from JSON to data
+    * - Fixme: ⚠️️ add doc
+    * - Note: THis work even if type isn't known. So more robust in some cases
+    */
+   public static func jsonToData(json: Any) -> Data? {
+      do {
+         return try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+      } catch let myJSONError {
+         print(myJSONError)
+      }
+      return nil
+   }
 }
