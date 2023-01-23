@@ -4,6 +4,7 @@ import Foundation
  */
 extension Data {
    /**
+    * - Fixme: ⚠️️ add doc
     * ## Examples:
     * let strings: [String]? = try ? "["a","b","c"]".data(using: .utf8)?.decode()
     */
@@ -14,6 +15,7 @@ extension Data {
 }
 extension String {
    /**
+    * - Fixme: ⚠️️ add doc
     * ## Examples:
     * let strings: [String]? = try ? "["a","b","c"]".decode()
     */

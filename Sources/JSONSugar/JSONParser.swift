@@ -5,6 +5,8 @@ import Foundation
 public class JSONParser {
    /**
     * Array with any
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func arr(_ json: Any?) -> [Any]? {
       json as? [Any]
@@ -14,18 +16,24 @@ public class JSONParser {
     * ## Examples:
     * JSONParser.dict("{\"title\":\"doctor\"}".json)["title"] //Output: doctor
     * - Fixme: ⚠️️ use generics on this. See DictParser etc
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func dict(_ json: Any?) -> [String: Any]? {
       json as? [String: Any]
    }
    /**
     * Returns an Int if the json is of type Int
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func int(_ json: Any?) -> Int? {
       json as? Int
    }
    /**
     * Returns an String if the json is of type String
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func str(_ json: Any?) -> String? {
       json as? String
@@ -34,14 +42,18 @@ public class JSONParser {
     * Array of dictionaries
     * ## Examples:
     * JSONParser.dictArr(JSONParser.json("[{\"title\": \"doctor\"}]"))?.forEach { print("\(JSONParser.dict($0)?["title"])") } //doctor
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func dictArr(_ json: Any?) -> [[String: Any]]? {
       json as? [[String: Any]]
    }
    /**
-    * Converts json string to json object
+    * Converts JSON string to JSON object
     * ## Examples:
     * "{\"title\": \"doctor\"}".json //Output: a JSON object
+    * - Parameter str: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func json(_ str: String) -> Any? {
       guard let data: Data = str.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
@@ -58,6 +70,8 @@ public class JSONParser {
     * - Note: If key is of type int, use recursion or reflection
     * ## Examples:
     * JSONParser.str(dict: ["2": "B", "1": "A", "3": ["1": true]])
+    * - Parameter dict: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func str<Key, Value>(dict: [Key: Value]) -> String? {
       do {
@@ -70,6 +84,8 @@ public class JSONParser {
    }
    /**
     * Converts dictionary-array to JSON-string (See readme for example)
+    * - Parameter dictArr: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func str<Key, Value>(dictArr: [[Key: Value]]) -> String? {
       do {

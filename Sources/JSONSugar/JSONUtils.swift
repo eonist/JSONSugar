@@ -3,7 +3,7 @@ import Foundation
 public class JSONUtils {
    /**
     * Describer
-    * - Abstract: traverses the json hierarchy and describes it
+    * - Description: Traverses the json hierarchy and describes it
     */
    public static func describe(_ json: Any?) {
       if let str = JSONParser.str(json) {
@@ -26,7 +26,7 @@ public class JSONUtils {
    /**
     * Convert data to JSON
     * - Fixme: ⚠️️ add doc
-    * - Note: .decode() should do the same
+    * - Note: `.decode()` should do the same
     * - Note: This work even if type isn't known. So more robust in some cases
     */
    public static func dataToJSON(data: Data) -> Any? {
@@ -40,8 +40,10 @@ public class JSONUtils {
    /**
     * Convert from JSON to data
     * - Fixme: ⚠️️ add doc
-    * - Note .encode() should do the same
+    * - Note `.encode()` should do the same
     * - Note: THis work even if type isn't known. So more robust in some cases
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public static func jsonToData(json: Any) -> Data? {
       do {

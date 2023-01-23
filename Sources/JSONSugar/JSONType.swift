@@ -10,6 +10,10 @@ public enum JSONType {
    case str
 }
 extension JSONType {
+   /**
+    * - Parameter json: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
+    */
    public static func type(_ json: Any?) -> JSONType? {
       switch true {
       case JSONAsserter.isStr(json): return .str

@@ -6,6 +6,9 @@ import Foundation
  * let jsonStr: String = "["a","b","c"]"
  * guard let jsonData = jsonStr.data(using: .utf8) else { fatalError("unable to convert string to data") }
  * guard let strings: [String] = try? decode(data: jsonData) else { fatalError("unable to decode jsonData") }
+ * - Parameter data: - Fixme: ⚠️️ add doc
+ * - Throws: - Fixme: ⚠️️ add doc
+ * - Returns: - Fixme: ⚠️️ add doc
  */
 public func decode<T: Decodable>(data: Data) throws -> T {
    let decoder = JSONDecoder()

@@ -13,12 +13,20 @@ public protocol DecodingContainerTransformer {
 extension KeyedDecodingContainer {
    /**
     * Fixme: ⚠️️ write doc
+    * - Parameters:
+    *   - key: - Fixme: ⚠️️ add doc
+    *   - transformer: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public func decode<Transformer: DecodingContainerTransformer>(key: Key, transformer: Transformer) throws -> Transformer.DecodingOutput where Transformer.DecodingInput: Decodable {
       try transformer.decode(input: try decode(Transformer.DecodingInput.self, forKey: key))
    }
    /**
     * For optional?
+    * - Parameters:
+    *   - key: - Fixme: ⚠️️ add doc
+    *   - transformer: - Fixme: ⚠️️ add doc
+    * - Returns: - Fixme: ⚠️️ add doc
     */
    public func decodeIfPresent<Transformer: DecodingContainerTransformer>(key: Key, transformer: Transformer) throws -> Transformer.DecodingOutput? where Transformer.DecodingInput: Decodable {
       try decodeIfPresent(Transformer.DecodingInput.self, forKey: key).map(transformer.decode)
