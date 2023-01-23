@@ -26,6 +26,7 @@ public class JSONUtils {
    /**
     * Convert data to JSON
     * - Fixme: ⚠️️ add doc
+    * - Note: .decode() should do the same
     * - Note: This work even if type isn't known. So more robust in some cases
     */
    public static func dataToJSON(data: Data) -> Any? {
@@ -39,6 +40,7 @@ public class JSONUtils {
    /**
     * Convert from JSON to data
     * - Fixme: ⚠️️ add doc
+    * - Note .encode() should do the same
     * - Note: THis work even if type isn't known. So more robust in some cases
     */
    public static func jsonToData(json: Any) -> Data? {
