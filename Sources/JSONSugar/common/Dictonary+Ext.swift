@@ -2,7 +2,7 @@ import Foundation
 
 extension Dictionary {
    /**
-    * - Fixme: ⚠️️ add doc
+    * Convert dictionary to json data
     */
    public var data: Data? {
       try? JSONSerialization.data(withJSONObject: self)

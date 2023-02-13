@@ -1,6 +1,6 @@
 import Foundation
 /**
- * Makes the code more reusable/modular
+ * Makes the code more reusable / modular
  */
 public protocol DecodingContainerTransformer {
    associatedtype DecodingInput
@@ -12,7 +12,7 @@ public protocol DecodingContainerTransformer {
  */
 extension KeyedDecodingContainer {
    /**
-    * Fixme: ⚠️️ write doc
+    * Ability to decode more complex json structures?
     * - Parameters:
     *   - key: - Fixme: ⚠️️ add doc
     *   - transformer: - Fixme: ⚠️️ add doc
