@@ -1,6 +1,6 @@
 import Foundation
 
-public class JSONUtils {
+public final class JSONUtils {
    /**
     * Describer
     * - Description: Traverses the json hierarchy and describes it

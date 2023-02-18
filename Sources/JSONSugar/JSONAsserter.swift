@@ -1,6 +1,6 @@
 import Foundation
 
-public class JSONAsserter {
+public final class JSONAsserter {
    /**
     * Asserts if a a json is a dictionary
     * - Parameter json: json dict isntance

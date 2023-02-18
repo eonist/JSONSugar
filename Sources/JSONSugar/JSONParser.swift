@@ -2,7 +2,7 @@ import Foundation
 /**
  * - Important. ⚠️️ See String+Extension `"".json` for json serilization from string and data
  */
-public class JSONParser {
+public final class JSONParser {
    /**
     * Array with any
     * - Parameter json: json instance
