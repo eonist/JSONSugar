@@ -6,10 +6,14 @@ public enum JSONType {
    case arr
    case int
    case dict
-   case dictArr /* An array of dictionaries */
+   case dictArr /* An array of dictionaries */ // - Fixme: ⚠️️ rename to arrDict
    case str
 }
 extension JSONType {
+   /**
+    * - Parameter json: json instance
+    * - Returns: json type
+    */
    public static func type(_ json: Any?) -> JSONType? {
       switch true {
       case JSONAsserter.isStr(json): return .str

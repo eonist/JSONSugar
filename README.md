@@ -1,6 +1,6 @@
 # JSONSugar
 
-json sugar for iOS and mac
+JSON sugar for iOS and macOS
 
 <img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/jsonlib.svg">
 
