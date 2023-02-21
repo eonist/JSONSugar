@@ -29,13 +29,8 @@ public final class JSONUtils {
     * - Remark: This work even if type isn't known. So more robust in some cases
     * - Parameter data: data
     */
-   public static func dataToJSON(data: Data) -> Any? {
-      do {
-         return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
-      } catch let myJSONError {
-         print(myJSONError)
-      }
-      return nil
+   public static func data2JSON(data: Data) throws -> Any {
+      try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
    }
    /**
     * Convert from JSON to data
@@ -43,12 +38,30 @@ public final class JSONUtils {
     * - Remark: This work even if type isn't known. So more robust in some cases
     * - Parameter json: json instnace
     */
+   public static func json2Data(json: Any) throws -> Data {
+      try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+   }
+}
+// deprecated
+extension JSONUtils {
+   // Deprecated ⚠️️
+   @available(*, deprecated, renamed: "data2JSON")
+   public static func dataToJSON(data: Data) -> Any? {
+      do {
+         return try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+      } catch let myJSONError {
+         print(myJSONError)
+         return nil
+      }
+   }
+   // Deprecated ⚠️️
+   @available(*, deprecated, renamed: "json2Data")
    public static func jsonToData(json: Any) -> Data? {
       do {
          return try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
       } catch let myJSONError {
          print(myJSONError)
+         return nil
       }
-      return nil
    }
 }
