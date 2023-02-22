@@ -25,8 +25,8 @@ public final class JSONUtils {
    }
    /**
     * Convert data to JSON
-    * - Note: `.decode()` should do the same
     * - Remark: This work even if type isn't known. So more robust in some cases
+    * - Fixme: ⚠️️ add more doc regardign `.mutableContainers`
     * - Parameter data: data
     */
    public static func data2JSON(data: Data) throws -> Any {
