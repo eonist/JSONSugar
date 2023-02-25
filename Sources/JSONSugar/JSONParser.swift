@@ -60,8 +60,8 @@ public final class JSONParser {
    }
    /**
     * Converts Dictionary to "JSON string"
-    * - Note: the opposite of this is: let decoded = try JSONSerialization.jsonObject(with: jsonData, options: []);if let dictFromJSON = decoded as? [String:String] {}
-    * - Note: If key is of type int, use recursion or reflection
+    * - Remark: the opposite of this is: let decoded = try JSONSerialization.jsonObject(with: jsonData, options: []);if let dictFromJSON = decoded as? [String:String] {}
+    * - Remark: If key is of type int, use recursion or reflection
     * ## Examples:
     * JSONParser.str(dict: ["2": "B", "1": "A", "3": ["1": true]])
     * - Parameter dict: Dictionary

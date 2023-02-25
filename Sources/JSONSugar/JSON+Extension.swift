@@ -1,7 +1,7 @@
 import Foundation
 /**
  * Global generic decode method for Decodable
- * - Note: You can also use data.decode()
+ * - Remark: You can also use data.decode()
  * ## Examples:
  * let jsonStr: String = "["a","b","c"]"
  * guard let jsonData = jsonStr.data(using: .utf8) else { fatalError("unable to convert string to data") }
