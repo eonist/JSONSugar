@@ -39,7 +39,7 @@ public final class JSONUtils {
     * - Parameter json: json instnace
     */
    public static func json2Data(json: Any) throws -> Data {
-      try JSONSerialization.data(withJSONObject: json, options: JSONSerialization.WritingOptions.prettyPrinted)
+      try JSONSerialization.data(withJSONObject: json, options: /*JSONSerialization.WritingOptions*/.prettyPrinted)
    }
 }
 // deprecated
