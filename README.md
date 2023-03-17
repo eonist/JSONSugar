@@ -155,9 +155,6 @@ print("\(job == clone ? "✅" : "🚫")") // ✅
 
 ### Todo:
 - Add basic example ✅
-- Use programatic app code
-- Make macOS example
-- Add Network example (in another project and then link to it)
-- Add topology map
+- Add unit tests 👈
+- Add github actions 👈
 - Add transformer example
-- Add tests 👈
