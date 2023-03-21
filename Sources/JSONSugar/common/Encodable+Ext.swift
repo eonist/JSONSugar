@@ -14,7 +14,7 @@ extension Encodable {
       // - Fixme: ⚠️️  Not sure how to convert try? to try
       let dict: [String: Any]? = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
       // Quick solution to return non-optional value
-      guard let dict = dict else { throw NSError.init(domain: "Err, unable to serialize to dict", code: 0) }
+      guard let dict = dict else { throw NSError(domain: "Err, unable to serialize to dict", code: 0) }
       return dict
    }
 }
