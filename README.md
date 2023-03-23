@@ -1,11 +1,8 @@
+[![Tests](https://github.com/eonist/JSONSugar/actions/workflows/Tests.yml/badge.svg)](https://github.com/eonist/JSONSugar/actions/workflows/Tests.yml)
+
 # JSONSugar
 
-JSON sugar for iOS and macOS
-
-<img width="100" alt="img" src="https://rawgit.com/stylekit/img/master/jsonlib.svg">
-
-### Installation
-- SPM: `.package(url: "https://github.com/eonist/JSONSugar.git", .branch("master"))`
+> JSON sugar for iOS and macOS
 
 ### Examples: (One-liner )
 
@@ -156,5 +153,5 @@ print("\(job == clone ? "✅" : "🚫")") // ✅
 ### Todo:
 - Add basic example ✅
 - Add unit tests 👈
-- Add github actions 👈
+- Add github actions ✅
 - Add transformer example
