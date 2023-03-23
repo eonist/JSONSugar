@@ -1,4 +1,5 @@
 [![Tests](https://github.com/eonist/JSONSugar/actions/workflows/Tests.yml/badge.svg)](https://github.com/eonist/JSONSugar/actions/workflows/Tests.yml)
+[![codebeat badge](https://codebeat.co/badges/f48ea431-2d22-4c0f-89d0-9ca34821b601)](https://codebeat.co/projects/github-com-eonist-jsonsugar-master)
 
 # JSONSugar
 
