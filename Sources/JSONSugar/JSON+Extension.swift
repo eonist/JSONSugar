@@ -23,7 +23,12 @@ extension Encodable {
     */
    public func encode() throws -> Data {
       let encoder = JSONEncoder()
-      encoder.outputFormatting = .prettyPrinted
+      if #available(macOS 10.13, *) { // - Fixme: ⚠️️ fix this later by upgrading package etc
+         encoder.outputFormatting = [.sortedKeys, .prettyPrinted]
+      } else {
+         // Fallback on earlier versions
+         encoder.outputFormatting = .prettyPrinted
+      }
       return try encoder.encode(self)
    }
 }
