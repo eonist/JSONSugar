@@ -4,12 +4,16 @@ import Foundation
  */
 extension Decodable {
    /**
-    * Dictonary -> Struct
-    * ## Examples:
-    * let test = Test(dict: ["a": "1", "b": "2"])
-    * - Parameter dict: JSON dict
+    * Dictionary -> Struct
+    * - Parameter dict: The dictionary to decode
+    * - Throws: An error if the decoding fails
+    * - Remark: This method uses the JSONDecoder to decode the dictionary to the specified type Self.
+    * - Example: let test = try Test(dict: ["a": "1", "b": "2"])
     */
    public init(dict: [String: Any]) throws {
-      self = try JSONDecoder().decode(Self.self, from: JSONSerialization.data(withJSONObject: dict))
+      // Create a JSONDecoder instance
+      let decoder = JSONDecoder()
+      // Decode the dictionary to the specified type using the JSONDecoder
+      self = try decoder.decode(Self.self, from: JSONSerialization.data(withJSONObject: dict))
    }
 }

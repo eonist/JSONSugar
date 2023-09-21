@@ -1,34 +1,47 @@
 import Foundation
 /**
- * Makes the code more reusable / modular
+ * Protocol for decoding container transformers
  */
 public protocol DecodingContainerTransformer {
    associatedtype DecodingInput
    associatedtype DecodingOutput
    func decode(input: DecodingInput) throws -> DecodingOutput
 }
+
 /**
- * Makes the code more reusable/modular
+ * Extension for KeyedDecodingContainer to add decoding methods with transformers
  */
 extension KeyedDecodingContainer {
    /**
-    * Ability to decode more complex json structures?
+    * Decode a value with a transformer
     * - Parameters:
-    *   - key: - Fixme: ⚠️️ add doc
-    *   - transformer: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    *   - key: The key to decode
+    *   - transformer: The transformer to use for decoding
+    * - Returns: The decoded value
+    * - Throws: An error if the decoding fails
     */
    public func decode<Transformer: DecodingContainerTransformer>(key: Key, transformer: Transformer) throws -> Transformer.DecodingOutput where Transformer.DecodingInput: Decodable {
-      try transformer.decode(input: try decode(Transformer.DecodingInput.self, forKey: key))
+      // Decode the value with the specified key to the input type of the transformer
+      let input = try decode(Transformer.DecodingInput.self, forKey: key)
+      // Use the transformer to decode the input value to the output type
+      return try transformer.decode(input: input)
    }
+   
    /**
-    * For optional?
+    * Decode an optional value with a transformer
     * - Parameters:
-    *   - key: - Fixme: ⚠️️ add doc
-    *   - transformer: - Fixme: ⚠️️ add doc
-    * - Returns: - Fixme: ⚠️️ add doc
+    *   - key: The key to decode
+    *   - transformer: The transformer to use for decoding
+    * - Returns: The decoded optional value, or nil if the value is not present
+    * - Throws: An error if the decoding fails
     */
    public func decodeIfPresent<Transformer: DecodingContainerTransformer>(key: Key, transformer: Transformer) throws -> Transformer.DecodingOutput? where Transformer.DecodingInput: Decodable {
-      try decodeIfPresent(Transformer.DecodingInput.self, forKey: key).map(transformer.decode)
+      // Decode the optional value with the specified key to the input type of the transformer
+      if let input = try decodeIfPresent(Transformer.DecodingInput.self, forKey: key) {
+         // Use the transformer to decode the input value to the output type
+         return try transformer.decode(input: input)
+      } else {
+         return nil
+      }
    }
 }

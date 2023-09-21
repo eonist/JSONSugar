@@ -4,13 +4,20 @@ import Foundation
  */
 extension String {
    /**
-    * Decode json-dict-data
-    * ## Examples:
-    * let strings: [String]? = try ? "["a","b","c"]".decode()
+    * Decode JSON data to a specified type
+    * - Parameter T: The type to decode the JSON data to
+    * - Parameter encoding: The string encoding to use when converting the string to data. Default is `.utf8`.
+    * - Returns: The decoded object of type T
+    * - Throws: An error if the decoding fails
+    * - Remark: This method uses the JSONDecoder to decode the JSON data to the specified type T.
+    * - Example: let strings: [String]? = try ? "["a","b","c"]".decode()
     */
    public func decode<T: Decodable>(encoding: String.Encoding = .utf8) throws -> T {
+      // Create a JSONDecoder instance
       let decoder = JSONDecoder()
+      // Convert the string to data using the specified encoding
       guard let data: Data = self.data(using: encoding) else { throw NSError(domain: "unable to convert string to data", code: 0) }
+      // Decode the data to the specified type using the JSONDecoder
       return try decoder.decode(T.self, from: data)
    }
 }

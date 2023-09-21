@@ -5,6 +5,25 @@
 
 > JSON sugar for iOS and macOS
 
+## Description: 
+JSONSugar is a Swift package that provides a simple and convenient way to work with JSON data in iOS and macOS apps.
+
+## Motivation
+Working with JSON data in Swift can be cumbersome and error-prone. JSONSugar was created to provide a simple and intuitive API for working with JSON data, making it easier to read, write, and manipulate JSON data in Swift.
+
+Installation
+JSONSugar can be installed using Swift Package Manager. To install the package, add the following line to your Package.swift file: `.package(url: "https://github.com/eonist/JSONSugar.git", from: "1.0.0")`
+
+### Usage
+JSONSugar provides a number of methods for working with JSON data, including:
+
+- decode<T: Decodable>(): Decodes JSON data to a specified type T.
+- getData(): Converts a dictionary to JSON data.
+- str(dict:): Converts a dictionary to a JSON string.
+- json(_:): Converts a JSON string to a JSON object.
+- dict(_:): Converts a JSON object to a dictionary.
+- dictArr(_:): Converts a JSON object to an array of dictionaries.
+
 ### Examples: (One-liner )
 
 ```swift
