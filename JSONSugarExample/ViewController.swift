@@ -23,11 +23,11 @@ class MainVC: UIViewController {
             ]
         }
         """
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+
         // Call two test functions
         test1()
         test2()

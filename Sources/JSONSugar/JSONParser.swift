@@ -14,7 +14,7 @@ public final class JSONParser {
    public static func arr(_ json: Any?) -> [Any]? {
       json as? [Any]
    }
-   
+
    /**
     * Returns a dictionary of type [String: Any] if the json is of type dictionary
     * - Description: The dict method takes a JSON object as input and returns a dictionary of type [String: Any] if the JSON object is of type dictionary, otherwise it returns nil. This method is not generic and should be replaced with a generic implementation.
@@ -28,7 +28,7 @@ public final class JSONParser {
    public static func dict(_ json: Any?) -> [String: Any]? {
       json as? [String: Any]
    }
-   
+
    /**
     * Returns an integer if the json is of type integer
     * - Description: The int method takes a JSON object as input and returns an integer if the JSON object is of type integer, otherwise it returns nil.
@@ -38,7 +38,7 @@ public final class JSONParser {
    public static func int(_ json: Any?) -> Int? {
       json as? Int
    }
-   
+
    /**
     * Returns a string if the json is of type string
     * - Description: The str method takes a JSON object as input and returns a string if the JSON object is of type string, otherwise it returns nil.
@@ -48,7 +48,7 @@ public final class JSONParser {
    public static func str(_ json: Any?) -> String? {
       json as? String
    }
-   
+
    /**
     * Returns an array of dictionaries if the json is of type array of dictionaries
     * - Description: The dictArr method takes a JSON object as input and returns an array of dictionaries if the JSON object is of type array of dictionaries, otherwise it returns nil.

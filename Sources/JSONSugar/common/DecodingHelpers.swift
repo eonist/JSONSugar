@@ -26,7 +26,7 @@ extension KeyedDecodingContainer {
       // Use the transformer to decode the input value to the output type
       return try transformer.decode(input: input)
    }
-   
+
    /**
     * Decode an optional value with a transformer
     * - Parameters:

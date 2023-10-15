@@ -22,7 +22,7 @@ public final class JSONUtils {
                 describe(value)
             }
         // Check if the JSON object is an array
-        } else if let arr = JSONParser.arr(json){
+        } else if let arr = JSONParser.arr(json) {
             Swift.print("Arr.count: " + "\(arr.count)")
             // Loop through each element in the array
             arr.forEach { describe($0) }
