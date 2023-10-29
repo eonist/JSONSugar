@@ -7,22 +7,22 @@ public final class JSONUtils {
      */
     public static func describe(_ json: Any? ) {
         // Check if the JSON object is a string
-        if let str = JSONParser.str(json) {
+        if let str: String = JSONParser.str(json) {
             Swift.print("Str: \(str)")
         // Check if the JSON object is an integer
-        } else if let int = JSONParser.int(json) {
+        } else if let int: Int = JSONParser.int(json) {
             Swift.print("Int: \(int)")
         // Check if the JSON object is a dictionary
-        } else if let dict = JSONParser.dict(json) {
+        } else if let dict: [String : Any] = JSONParser.dict(json) {
             Swift.print("Dict.count: " + "\(dict.count)")
             // Loop through each key-value pair in the dictionary
-            dict.forEach { key, value in
+            dict.forEach { (key: String, value: Any) in
                 Swift.print("key: \(key)")
                 // Recursively call the describe function on each value in the dictionary
                 describe(value)
             }
         // Check if the JSON object is an array
-        } else if let arr = JSONParser.arr(json) {
+        } else if let arr: [Any] = JSONParser.arr(json) {
             Swift.print("Arr.count: " + "\(arr.count)")
             // Loop through each element in the array
             arr.forEach { describe($0) }
@@ -50,7 +50,6 @@ public final class JSONUtils {
         try JSONSerialization.data(withJSONObject: json, options: /*JSONSerialization.WritingOptions*/.prettyPrinted)
     }
 }
-
 // deprecated
 extension JSONUtils {
     // Deprecated ⚠️️

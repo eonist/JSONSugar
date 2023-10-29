@@ -1,5 +1,4 @@
 import Foundation
-
 /**
  * A utility class for parsing JSON data
  * - Important. ⚠️️ See String+Extension `"".json` for json serilization from string and data
@@ -14,7 +13,6 @@ public final class JSONParser {
    public static func arr(_ json: Any?) -> [Any]? {
       json as? [Any]
    }
-
    /**
     * Returns a dictionary of type [String: Any] if the json is of type dictionary
     * - Description: The dict method takes a JSON object as input and returns a dictionary of type [String: Any] if the JSON object is of type dictionary, otherwise it returns nil. This method is not generic and should be replaced with a generic implementation.
@@ -28,7 +26,6 @@ public final class JSONParser {
    public static func dict(_ json: Any?) -> [String: Any]? {
       json as? [String: Any]
    }
-
    /**
     * Returns an integer if the json is of type integer
     * - Description: The int method takes a JSON object as input and returns an integer if the JSON object is of type integer, otherwise it returns nil.
@@ -38,7 +35,6 @@ public final class JSONParser {
    public static func int(_ json: Any?) -> Int? {
       json as? Int
    }
-
    /**
     * Returns a string if the json is of type string
     * - Description: The str method takes a JSON object as input and returns a string if the JSON object is of type string, otherwise it returns nil.
@@ -48,7 +44,6 @@ public final class JSONParser {
    public static func str(_ json: Any?) -> String? {
       json as? String
    }
-
    /**
     * Returns an array of dictionaries if the json is of type array of dictionaries
     * - Description: The dictArr method takes a JSON object as input and returns an array of dictionaries if the JSON object is of type array of dictionaries, otherwise it returns nil.
@@ -70,17 +65,19 @@ public final class JSONParser {
     * - Parameter str: json string
     */
    public static func json(_ str: String) -> Any? {
-         // Convert the string to data
-         guard let data: Data = str.data(using: String.Encoding.utf8, allowLossyConversion: false) else { return nil }
-         // Convert the data to a JSON object
-         if let json: Any = try? JSONSerialization.jsonObject(with: data, options: []) {
-            return json
-         } else {
-            // Print an error message if the conversion fails
-            Swift.print("⚠️️ JSON is format wrongly: \(str)")
-            return nil
-         }
+      // Convert the string to data
+      guard let data: Data = str.data(using: String.Encoding.utf8, allowLossyConversion: false) else { 
+         return nil 
       }
+      // Convert the data to a JSON object
+      if let json: Any = try? JSONSerialization.jsonObject(with: data, options: []) {
+         return json
+      } else {
+         // Print an error message if the conversion fails
+         Swift.print("⚠️️ JSON is format wrongly: \(str)")
+         return nil
+      }
+   }
    /**
     * Converts a dictionary to a JSON string
     * - Description: The str(dict:) method takes a dictionary as input and returns the corresponding JSON string, or nil if the dictionary cannot be converted to a JSON string. The opposite of this method is JSONSerialization.jsonObject(with:options:), which can be used to convert a JSON string back to a dictionary. If the dictionary contains keys of type Int, recursion or reflection should be used instead.
@@ -90,20 +87,19 @@ public final class JSONParser {
     * - Remark: If the dictionary contains keys of type `Int`, recursion or reflection should be used instead.
     * ## Examples:
     * JSONParser.str(dict: ["2": "B", "1": "A", "3": ["1": true]])
-
     */
    public static func str<Key, Value>(dict: [Key: Value]) -> String? {
-         do {
-            // Convert the dictionary to JSON data
-            let jsonData: Data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
-            // Convert the JSON data to a string
-            return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
-         } catch {
-            // Print the error message if an error occurs
-            Swift.print(error.localizedDescription)
-            return nil
-         }
+      do {
+         // Convert the dictionary to JSON data
+         let jsonData: Data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+         // Convert the JSON data to a string
+         return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
+      } catch {
+         // Print the error message if an error occurs
+         Swift.print(error.localizedDescription)
+         return nil
       }
+   }
    /**
     * Converts an array of dictionaries to a JSON string
     * - Description: The str(dictArr:) method takes an array of dictionaries as input and returns the corresponding JSON string, or nil if the array of dictionaries cannot be converted to a JSON string. This method is similar to str(dict:), but is used for an array of dictionaries instead of a single dictionary. The parameter name should be renamed to arrDict.
@@ -115,15 +111,15 @@ public final class JSONParser {
     * - Fixme: ⚠️️ rename param to arrDict?
     */
    public static func str<Key, Value>(dictArr: [[Key: Value]]) -> String? {
-         do {
-            // Convert the array of dictionaries to JSON data
-            let jsonData: Data = try JSONSerialization.data(withJSONObject: dictArr, options: .prettyPrinted)
-            // Convert the JSON data to a string
-            return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
-         } catch {
-            // Print the error message if an error occurs
-            Swift.print(error.localizedDescription)
-            return nil
-         }
+      do {
+         // Convert the array of dictionaries to JSON data
+         let jsonData: Data = try JSONSerialization.data(withJSONObject: dictArr, options: .prettyPrinted)
+         // Convert the JSON data to a string
+         return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
+      } catch {
+         // Print the error message if an error occurs
+         Swift.print(error.localizedDescription)
+         return nil
       }
+   }
 }

@@ -16,11 +16,12 @@ extension Encodable {
       // Convert the JSON data to a dictionary using the JSONSerialization class
       let dict: [String: Any]? = (try? JSONSerialization.jsonObject(with: data, options: .allowFragments)).flatMap { $0 as? [String: Any] }
       // Return the dictionary, or throw an error if the conversion fails
-      guard let dict = dict else { throw NSError(domain: "Err, unable to serialize to dict", code: 0) }
+      guard let dict: [String : Any] = dict else { 
+         throw NSError(domain: "Err, unable to serialize to dict", code: 0) 
+      }
       return dict
    }
 }
-
 // Deprecated ⚠️️
 extension Encodable {
    /**

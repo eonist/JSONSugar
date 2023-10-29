@@ -1,5 +1,4 @@
 import Foundation
-
 /**
  * Extension for Dictionary to add a method for converting a dictionary to JSON data
  */
@@ -14,7 +13,6 @@ extension Dictionary {
       try JSONSerialization.data(withJSONObject: self)
    }
 }
-
 /**
  * Deprecated extension for Dictionary to add a computed property for getting JSON data
  * - Remark: This extension is deprecated and has been renamed to `getData()`.

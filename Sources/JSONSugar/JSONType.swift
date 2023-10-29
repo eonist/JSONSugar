@@ -1,5 +1,4 @@
 import Foundation
-
 /**
  * An enumeration that represents the different types of JSON objects that can be encountered
  */
@@ -10,7 +9,6 @@ public enum JSONType {
    case dictArr /* An array of dictionaries */ // - Fixme: ⚠️️ rename to arrDict
    case str // A string
 }
-
 extension JSONType {
    /**
     * Determines the type of the given JSON object

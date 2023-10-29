@@ -12,7 +12,7 @@ extension Decodable {
     */
    public init(dict: [String: Any]) throws {
       // Create a JSONDecoder instance
-      let decoder = JSONDecoder()
+      let decoder: JSONDecoder = .init()
       // Decode the dictionary to the specified type using the JSONDecoder
       self = try decoder.decode(Self.self, from: JSONSerialization.data(withJSONObject: dict))
    }

@@ -4,7 +4,7 @@ import UIKit
  */
 class MainVC: UIViewController {
     // Two JSON strings for testing purposes
-    let jsonStr = """
+    let jsonStr: String = """
         {
             "name": "The Whale",
             "whaleType": "Blue Whale",
@@ -14,7 +14,7 @@ class MainVC: UIViewController {
             }
         }
         """
-    let jsonStr2 = """
+    let jsonStr2: String = """
         {
             "regions" : [
                 {"language":"English", "artist":"Beyonce", "album":"Lemonade"},
@@ -23,11 +23,9 @@ class MainVC: UIViewController {
             ]
         }
         """
-
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-
         // Call two test functions
         test1()
         test2()
@@ -48,7 +46,6 @@ struct Whale: Decodable {
     let whaleType: String
     let whaleInfo: WhaleInfo
 }
-
 /**
  * Data structure for featured data, conforming to the Codable protocol
  * Contains an array of regions, each with a language, artist, and album

@@ -22,13 +22,13 @@ extension Encodable {
     * Encode class instance as json-dict-data
     */
    public func encode() throws -> Data {
-      let encoder = JSONEncoder()
-//      if #available(macOS 10.13, *), #available(iOS 11.0, *) { // - Fixme: ⚠️️ fix this later by upgrading package etc
+      let encoder: JSONEncoder = .init()
+      // if #available(macOS 10.13, *), #available(iOS 11.0, *) { // - Fixme: ⚠️️ fix this later by upgrading package etc
          encoder.outputFormatting = [.sortedKeys, .prettyPrinted]
-//      } else {
-//         // Fallback on earlier versions
-//         encoder.outputFormatting = .prettyPrinted
-//      }
+      // } else {
+      //    // Fallback on earlier versions
+      //    encoder.outputFormatting = .prettyPrinted
+      // }
       return try encoder.encode(self)
    }
 }
