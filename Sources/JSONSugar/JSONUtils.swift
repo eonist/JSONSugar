@@ -3,7 +3,8 @@ import Foundation
 public final class JSONUtils {
     /**
      * Describer
-     * - Description: Traverses the json hierarchy and describes it
+     * - Description: Traverses a JSON hierarchy and describes it
+     * - Fixme: ⚠️️ add an example in the comments
      */
     public static func describe(_ json: Any? ) {
         // Check if the JSON object is a string
@@ -34,7 +35,7 @@ public final class JSONUtils {
     /**
      * Convert data to JSON
      * - Remark: This work even if type isn't known. So more robust in some cases
-     * - Fixme: ⚠️️ add more doc regardign `.mutableContainers`
+     * - Fixme: ⚠️️ add more doc regarding `.mutableContainers`
      * - Parameter data: data
      */
     public static func data2JSON(data: Data) throws -> Any {
@@ -44,7 +45,7 @@ public final class JSONUtils {
      * Convert from JSON to data
      * - Remark `.encode()` should do the same
      * - Remark: This work even if type isn't known. So more robust in some cases
-     * - Parameter json: json instnace
+     * - Parameter json: json instance
      */
     public static func json2Data(json: Any) throws -> Data {
         try JSONSerialization.data(withJSONObject: json, options: /*JSONSerialization.WritingOptions*/.prettyPrinted)

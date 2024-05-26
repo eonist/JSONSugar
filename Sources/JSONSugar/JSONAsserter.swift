@@ -1,5 +1,7 @@
 import Foundation
-
+/**
+ * JSON asserter
+ */
 public final class JSONAsserter {
    /**
     * Asserts if a a json is a dictionary

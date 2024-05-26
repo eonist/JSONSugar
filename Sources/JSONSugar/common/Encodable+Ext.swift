@@ -8,7 +8,8 @@ extension Encodable {
     * - Returns: The dictionary representation of the struct
     * - Throws: An error if the conversion fails
     * - Remark: This method uses the JSONEncoder to encode the struct to JSON data, and then uses the JSONSerialization class to convert the JSON data to a dictionary.
-    * - Example: struct Test { let a: String, b }; try Test(a: "1", b: "2").getDict() // ["a": "1", "b": "2"]
+    * ## Examples:
+    * struct Test { let a: String, b }; try Test(a: "1", b: "2").getDict() // ["a": "1", "b": "2"]
     */
    public func getDict() throws -> [String: Any] {
       // Encode the struct to JSON data using the JSONEncoder

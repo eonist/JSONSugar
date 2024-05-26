@@ -20,6 +20,7 @@ public func decode<T: Decodable>(data: Data) throws -> T {
 extension Encodable {
    /**
     * Encode class instance as json-dict-data
+    * - Fixme: ⚠️️ add more doc
     */
    public func encode() throws -> Data {
       let encoder: JSONEncoder = .init()

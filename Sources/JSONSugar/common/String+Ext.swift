@@ -5,8 +5,9 @@ import Foundation
 extension String {
    /**
     * Decode JSON data to a specified type
-    * - Parameter T: The type to decode the JSON data to
-    * - Parameter encoding: The string encoding to use when converting the string to data. Default is `.utf8`.
+    * - Parameters:
+    *   - T: The type to decode the JSON data to
+    *   - encoding: The string encoding to use when converting the string to data. Default is `.utf8`.
     * - Returns: The decoded object of type T
     * - Throws: An error if the decoding fails
     * - Remark: This method uses the JSONDecoder to decode the JSON data to the specified type T.

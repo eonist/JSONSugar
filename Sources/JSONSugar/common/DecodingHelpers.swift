@@ -1,6 +1,7 @@
 import Foundation
 /**
  * Protocol for decoding container transformers
+ * - Fixme: ⚠️️ add more doc
  */
 public protocol DecodingContainerTransformer {
    associatedtype DecodingInput

@@ -8,7 +8,8 @@ extension Decodable {
     * - Parameter dict: The dictionary to decode
     * - Throws: An error if the decoding fails
     * - Remark: This method uses the JSONDecoder to decode the dictionary to the specified type Self.
-    * - Example: let test = try Test(dict: ["a": "1", "b": "2"])
+    * ## Examples:
+    * let test = try Test(dict: ["a": "1", "b": "2"])
     */
    public init(dict: [String: Any]) throws {
       // Create a JSONDecoder instance

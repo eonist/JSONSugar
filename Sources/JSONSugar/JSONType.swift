@@ -1,6 +1,7 @@
 import Foundation
 /**
  * An enumeration that represents the different types of JSON objects that can be encountered
+ * - Fixme: ⚠️️ add more doc, where is this used etc?
  */
 public enum JSONType {
    case arr // An array
