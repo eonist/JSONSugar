@@ -14,7 +14,7 @@ extension Data {
     * let strings: [String]? = try ? "["a","b","c"]".data(using: .utf8)?.decode()
     */
    public func decode<T: Decodable>() throws -> T {
-      let decoder: JSONDecoder = .init()
+      let decoder: JSONDecoder = .init() // Initializes a new instance of JSONDecoder
       // Decode the data to the specified type using the JSONDecoder
       return try decoder.decode(T.self, from: self)
    }

@@ -66,11 +66,18 @@ public final class JSONParser {
     */
    public static func json(_ str: String) -> Any? {
       // Convert the string to data
-      guard let data: Data = str.data(using: String.Encoding.utf8, allowLossyConversion: false) else { 
+      guard let data: Data = str.data( // Attempt to convert the string to Data using UTF-8 encoding without lossy conversion
+         using: String.Encoding.utf8, // Specify UTF-8 as the string encoding
+         allowLossyConversion: false // Do not allow lossy conversion
+      ) // End of guard statement
+      else { 
          return nil 
       }
       // Convert the data to a JSON object
-      if let json: Any = try? JSONSerialization.jsonObject(with: data, options: []) {
+      if let json: Any = try? JSONSerialization.jsonObject( // Attempt to deserialize the JSON data into a JSON object
+         with: data, // The data to deserialize
+         options: [] // No options specified for deserialization
+      ) {
          return json
       } else {
          // Print an error message if the conversion fails
@@ -91,9 +98,15 @@ public final class JSONParser {
    public static func str<Key, Value>(dict: [Key: Value]) -> String? {
       do {
          // Convert the dictionary to JSON data
-         let jsonData: Data = try JSONSerialization.data(withJSONObject: dict, options: .prettyPrinted)
+         let jsonData: Data = try JSONSerialization.data( // Attempt to serialize the dictionary into JSON data
+            withJSONObject: dict, // The dictionary object to serialize
+            options: .prettyPrinted // JSON output formatting option for pretty-printed string
+         ) // End of serialization attempt
          // Convert the JSON data to a string
-         return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
+         return NSString(
+            data: jsonData, // Create an NSString from the JSON data
+            encoding: String.Encoding.utf8.rawValue // Use UTF-8 encoding for the string conversion
+         ) as String? // Cast the NSString to a native Swift String, may return nil if conversion fails
       } catch {
          // Print the error message if an error occurs
          Swift.print(error.localizedDescription)
@@ -113,9 +126,15 @@ public final class JSONParser {
    public static func str<Key, Value>(dictArr: [[Key: Value]]) -> String? {
       do {
          // Convert the array of dictionaries to JSON data
-         let jsonData: Data = try JSONSerialization.data(withJSONObject: dictArr, options: .prettyPrinted)
+         let jsonData: Data = try JSONSerialization.data( // Attempt to serialize the array of dictionaries into JSON data
+            withJSONObject: dictArr, // The array of dictionaries object to serialize
+            options: .prettyPrinted // JSON output formatting option for pretty-printed string
+         ) // End of serialization attempt
          // Convert the JSON data to a string
-         return NSString(data: jsonData, encoding: String.Encoding.utf8.rawValue) as String?
+         return NSString( // Create an NSString from the JSON data
+            data: jsonData, // The JSON data to be converted to string
+            encoding: String.Encoding.utf8.rawValue // Specify UTF-8 as the string encoding
+         ) as String? // Cast the NSString to a native Swift String, may return nil if conversion fails
       } catch {
          // Print the error message if an error occurs
          Swift.print(error.localizedDescription)

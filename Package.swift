@@ -15,6 +15,9 @@ let package = Package(
     targets: [
         .target(
             name: "JSONSugar",
-            dependencies: ["FileSugar"])
+            dependencies: ["FileSugar"]),
+        .testTarget(
+            name: "JSONSugarTests",
+            dependencies: ["JSONSugar"])
     ]
 )

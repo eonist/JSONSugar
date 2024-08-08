@@ -34,21 +34,36 @@ public final class JSONUtils {
     }
     /**
      * Convert data to JSON
+     * - Description: This method converts raw Data into a JSON object. It uses `JSONSerialization to attempt to deserialize the provided data into a JSON format. If successful, it returns the JSON object, which can be a dictionary, an array, or a primitive type. This method is useful when the structure of the JSON is not known in advance or when it is not necessary to convert the JSON into a specific Swift type.
      * - Remark: This work even if type isn't known. So more robust in some cases
-     * - Fixme: ⚠️️ add more doc regarding `.mutableContainers`
+     * - Note: The `.mutableContainers` option in `JSONSerialization` allows the resulting containers (i.e., dictionaries and arrays) to be mutable. This means that you can add, remove, or modify elements in the resulting collections. If you don't need to change the JSON object after it's created, you can use the default option, which is `.init()`, to create immutable containers.
      * - Parameter data: data
+     * - fixme: maybe add mutable immutable param
      */
     public static func data2JSON(data: Data) throws -> Any {
-        try JSONSerialization.jsonObject(with: data, options: .mutableContainers)
+        // Attempt to deserialize JSON data into a JSON object
+        try JSONSerialization.jsonObject(
+            // The data to deserialize
+            with: data, 
+            // Specify mutable containers as the reading option for the JSON data
+            options: .mutableContainers
+        )
     }
     /**
      * Convert from JSON to data
+     * - Description: This method serializes a JSON object into Data format. It can handle any JSON object, including arrays, dictionaries, and primitive types. The serialization process includes formatting the JSON data in a pretty-printed manner, which makes the output more readable. This method is useful when you need to convert a JSON object into Data for storage or network transmission.
      * - Remark `.encode()` should do the same
      * - Remark: This work even if type isn't known. So more robust in some cases
      * - Parameter json: json instance
      */
     public static func json2Data(json: Any) throws -> Data {
-        try JSONSerialization.data(withJSONObject: json, options: /*JSONSerialization.WritingOptions*/.prettyPrinted)
+        // Attempt to serialize a JSON object into data
+        try JSONSerialization.data(
+            // The JSON object to serialize
+            withJSONObject: json, 
+            // Specify pretty printed as the writing option for the JSON data
+            options: /*JSONSerialization.WritingOptions*/.prettyPrinted
+        )
     }
 }
 // deprecated

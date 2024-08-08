@@ -11,7 +11,7 @@ JSONSugar is a Swift package that provides a simple and convenient way to work w
 ## Motivation
 Working with JSON data in Swift can be cumbersome and error-prone. JSONSugar was created to provide a simple and intuitive API for working with JSON data, making it easier to read, write, and manipulate JSON data in Swift.
 
-Installation
+## Installation
 JSONSugar can be installed using Swift Package Manager. To install the package, add the following line to your Package.swift file: `.package(url: "https://github.com/eonist/JSONSugar.git", from: "1.0.0")`
 
 ### Usage
@@ -173,5 +173,6 @@ print("\(job == clone ? "✅" : "🚫")") // ✅
 ### Todo:
 - Add basic example ✅
 - Add github actions ✅
-- Add unit tests 👈👈👈
+- Add unit tests ✅ use copilot
+- Move some of the examples in the readme to the unit test
 - Add transformer example

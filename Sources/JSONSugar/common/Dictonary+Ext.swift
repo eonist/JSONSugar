@@ -5,6 +5,7 @@ import Foundation
 extension Dictionary {
    /**
     * Convert dictionary to JSON data
+    * - Description: This method converts a dictionary into JSON data. It uses the JSONSerialization class to perform the conversion.
     * - Returns: The JSON data representation of the dictionary
     * - Throws: An error if the conversion fails
     */

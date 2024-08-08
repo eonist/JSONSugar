@@ -5,6 +5,7 @@ import Foundation
 extension Encodable {
    /**
     * Struct -> Dictionary
+    * - Description: This method converts a struct into a dictionary. It first encodes the struct into JSON data using the JSONEncoder, then converts the JSON data into a dictionary using the JSONSerialization class.
     * - Returns: The dictionary representation of the struct
     * - Throws: An error if the conversion fails
     * - Remark: This method uses the JSONEncoder to encode the struct to JSON data, and then uses the JSONSerialization class to convert the JSON data to a dictionary.

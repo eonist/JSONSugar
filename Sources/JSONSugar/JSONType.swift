@@ -1,6 +1,7 @@
 import Foundation
 /**
  * An enumeration that represents the different types of JSON objects that can be encountered
+ * - Description: Represents the type of a JSON element, which can be an array, integer, dictionary, array of dictionaries, or string. This enumeration is used to categorize JSON elements for parsing and type-checking within the application.
  * - Fixme: ⚠️️ add more doc, where is this used etc?
  */
 public enum JSONType {
@@ -13,6 +14,7 @@ public enum JSONType {
 extension JSONType {
    /**
     * Determines the type of the given JSON object
+    * - Description: This method determines the type of a given JSON object. It checks if the JSON object is a string, integer, dictionary, array of dictionaries, or an array, and returns the corresponding JSONType. If the JSON object is not of any of these types, it returns nil.
     * - Parameter json: The JSON object to determine the type of
     * - Returns: The type of the JSON object
     */
