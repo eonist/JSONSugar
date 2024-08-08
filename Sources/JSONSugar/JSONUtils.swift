@@ -38,7 +38,7 @@ public final class JSONUtils {
      * - Remark: This work even if type isn't known. So more robust in some cases
      * - Note: The `.mutableContainers` option in `JSONSerialization` allows the resulting containers (i.e., dictionaries and arrays) to be mutable. This means that you can add, remove, or modify elements in the resulting collections. If you don't need to change the JSON object after it's created, you can use the default option, which is `.init()`, to create immutable containers.
      * - Parameter data: data
-     * - fixme: maybe add mutable immutable param
+     * - Fixme: ⚠️️ maybe add mutable immutable param
      */
     public static func data2JSON(data: Data) throws -> Any {
         // Attempt to deserialize JSON data into a JSON object

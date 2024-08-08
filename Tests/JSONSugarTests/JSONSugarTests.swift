@@ -269,4 +269,3 @@ extension JSONSugarTests {
         XCTAssertEqual(convertedDictArr?[1]["age"] as? Int, 25, "The age in the second dictionary should be 25")
     }
 }
- 
