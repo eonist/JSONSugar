@@ -70,8 +70,8 @@ public final class JSONParser {
          using: String.Encoding.utf8, // Specify UTF-8 as the string encoding
          allowLossyConversion: false // Do not allow lossy conversion
       ) // End of guard statement
-      else { 
-         return nil 
+      else {
+         return nil
       }
       // Convert the data to a JSON object
       if let json: Any = try? JSONSerialization.jsonObject( // Attempt to deserialize the JSON data into a JSON object

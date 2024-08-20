@@ -14,7 +14,7 @@ public final class JSONUtils {
         } else if let int: Int = JSONParser.int(json) {
             Swift.print("Int: \(int)")
         // Check if the JSON object is a dictionary
-        } else if let dict: [String : Any] = JSONParser.dict(json) {
+        } else if let dict: [String: Any] = JSONParser.dict(json) {
             Swift.print("Dict.count: " + "\(dict.count)")
             // Loop through each key-value pair in the dictionary
             dict.forEach { (key: String, value: Any) in
@@ -44,7 +44,7 @@ public final class JSONUtils {
         // Attempt to deserialize JSON data into a JSON object
         try JSONSerialization.jsonObject(
             // The data to deserialize
-            with: data, 
+            with: data,
             // Specify mutable containers as the reading option for the JSON data
             options: .mutableContainers
         )
@@ -60,7 +60,7 @@ public final class JSONUtils {
         // Attempt to serialize a JSON object into data
         try JSONSerialization.data(
             // The JSON object to serialize
-            withJSONObject: json, 
+            withJSONObject: json,
             // Specify pretty printed as the writing option for the JSON data
             options: /*JSONSerialization.WritingOptions*/.prettyPrinted
         )

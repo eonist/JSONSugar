@@ -2,7 +2,6 @@ import XCTest
 @testable import JSONSugar
 
 final class JSONSugarTests: XCTestCase {
-
     /**
      * Test the all tests
      * - Description: This is a collection of all the test cases for the JSONSugar package. It includes tests for decoding, getting data, converting string to dictionary, converting JSON string to JSON object, converting JSON object to dictionary, and converting JSON object to an array of dictionaries.
@@ -194,7 +193,7 @@ extension JSONSugarTests {
             return
         }
         XCTAssertEqual(dict["title"] as? String, "doctor", "The title should be 'doctor'")
-    }  
+    }
     /** 
      * Test the dictArr function
      * - Description: This test case verifies the functionality of the dictArr function. It creates a JSON string representing an array of dictionaries and then uses the dictArr function to convert the JSON string into an array of dictionaries. The test asserts that the resulting array is not nil, has the correct count, and contains the expected values.
