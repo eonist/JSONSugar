@@ -1,9 +1,9 @@
-// swift-tools-version:5.6
+// swift-tools-version:5.9
 import PackageDescription
 
 let package = Package(
     name: "JSONSugar",
-    platforms: [.iOS(.v15), .macOS(.v10_15)],
+    platforms: [.iOS(.v17), .macOS(.v14)],
     products: [
         .library(
             name: "JSONSugar",
