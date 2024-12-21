@@ -2,7 +2,7 @@ import Foundation
 /**
  * Protocol for decoding container transformers
  * - Description: This protocol defines a blueprint for transforming a decoding container. It requires a type for the input and output of the decoding process, and a method to perform the decoding.
- * - Fixme: ⚠️️ add more doc
+ * - Note: This protocol is designed to be implemented by types that need to transform data during the decoding process. It provides a flexible mechanism to convert raw decoded data into a more suitable format or type, which can be particularly useful in scenarios where the data structure in the JSON does not directly map to the desired data structure in the application.
  */
 public protocol DecodingContainerTransformer {
    associatedtype DecodingInput // Defines an associated type for the input of the decoding process
@@ -11,7 +11,7 @@ public protocol DecodingContainerTransformer {
 }
 /**
  * Extension for KeyedDecodingContainer to add decoding methods with transformers
- * - Fixme: ⚠️️ Add description
+ * - Description: This extension adds methods to KeyedDecodingContainer that enable decoding values using transformers. The transformers allow for custom conversion of decoded values into desired output types. This is particularly useful when the raw decoded data needs to be transformed into a different format or type before use.
  */
 extension KeyedDecodingContainer {
    /**

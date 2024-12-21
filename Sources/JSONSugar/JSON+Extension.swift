@@ -25,7 +25,9 @@ extension Encodable {
    /**
     * Encode class instance as json-dict-data
     * - Description: This method encodes an instance of an Encodable type into JSON data. It uses the JSONEncoder to perform the encoding.
-    * - Fixme: ⚠️️ add more doc
+    * - Remark: This method is useful for converting an object into a JSON data representation.
+    * - Throws: An error if the encoding process fails.
+    * - Returns: The JSON data representation of the object.
     */
    public func encode() throws -> Data {
       let encoder: JSONEncoder = .init()

@@ -2,7 +2,7 @@ import Foundation
 /**
  * An enumeration that represents the different types of JSON objects that can be encountered
  * - Description: Represents the type of a JSON element, which can be an array, integer, dictionary, array of dictionaries, or string. This enumeration is used to categorize JSON elements for parsing and type-checking within the application.
- * - Fixme: ⚠️️ add more doc, where is this used etc?
+ * - Note: Used in the `JSONParser` to parse and categorize JSON elements.
  */
 public enum JSONType {
    case arr // An array
