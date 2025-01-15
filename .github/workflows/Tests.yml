@@ -5,6 +5,8 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
+  schedule:
+    - cron: '0 0 * * 0' # Runs every Sunday at midnight UTC
 
 jobs:
   build:
@@ -13,7 +15,15 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
+
+    - name: Sleep for random time
+      run: |
+        MAX_SLEEP=$((6*60*60)) # 6 hours in seconds (GitHub Actions max runtime)
+        SLEEP_TIME=$(($RANDOM % $MAX_SLEEP))
+        echo "Sleeping for $SLEEP_TIME seconds..."
+        sleep $SLEEP_TIME
+
     - name: Build
       run: swift build -v
-    ## - name: Run tests
-      ## run: swift test -v
+    - name: Run tests
+      run: swift test -v
