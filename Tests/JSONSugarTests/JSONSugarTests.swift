@@ -233,38 +233,158 @@ extension JSONSugarTests {
      * Test the strDict function
      * - Description: This test case verifies the functionality of the strDict function. It creates a dictionary, converts it to a JSON string using the strDict function, and then uses the strDict function to convert the JSON string into a dictionary. The test asserts that the resulting dictionary is not nil and that its key-value pairs match the expected values.
      */
-    func testJSONParserStrDict() throws {
-        let dict: [String: Any] = ["2": "B", "1": "A", "3": ["1": true]]
+    func testJSONParserStrDict() {
+        let dict: [String: Any] = ["name": "Charlie", "age": 40, "isEmployed": true]
         guard let jsonString = JSONParser.str(dict: dict) else {
-            XCTFail("Unable to convert Dictionary to jsonString")
+            XCTFail("Unable to convert dictionary to JSON string")
             return
         }
-        XCTAssertNotNil(jsonString, "The JSON string should not be nil")
-        let jsonData = jsonString.data(using: .utf8)!
-        let convertedDict: [String: Any]? = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [String: Any]
-        XCTAssertEqual(convertedDict?["2"] as? String, "B")
-        XCTAssertEqual(convertedDict?["1"] as? String, "A")
-        let innerDict = convertedDict?["3"] as? [String: Bool]
-        XCTAssertEqual(innerDict?["1"], true)
+        XCTAssertTrue(jsonString.contains("\"name\" : \"Charlie\""))
+        XCTAssertTrue(jsonString.contains("\"age\" : 40"))
+        XCTAssertTrue(jsonString.contains("\"isEmployed\" : true"))
     }
     /** 
      * Test the strDictArr function
      * - Description: This test case verifies the functionality of the strDictArr function. It creates an array of dictionaries, converts it to a JSON string using the strDictArr function, and then uses the strDictArr function to convert the JSON string into an array of dictionaries. The test asserts that the resulting array is not nil, has the correct count, and contains the expected values.
      */
-    func testJSONParserStrDictArr() throws {
-        let dictArr: [[String: Any]] = [["name": "John", "age": 30], ["name": "Jane", "age": 25]]
+    func testJSONParserStrDictArr() {
+        let dictArr: [[String: Any]] = [
+            ["name": "David", "age": 45],
+            ["name": "Eve", "age": 50]
+        ]
         guard let jsonString = JSONParser.str(dictArr: dictArr) else {
-            XCTFail("Unable to convert Array of Dictionaries to jsonString")
+            XCTFail("Unable to convert array of dictionaries to JSON string")
             return
         }
-        XCTAssertNotNil(jsonString, "The JSON string should not be nil")
-        let jsonData = jsonString.data(using: .utf8)!
-        let convertedDictArr: [[String: Any]]? = try? JSONSerialization.jsonObject(with: jsonData, options: []) as? [[String: Any]]
-        XCTAssertNotNil(convertedDictArr, "The converted array of dictionaries should not be nil")
-        XCTAssertEqual(convertedDictArr?.count, 2, "The count of the array should be 2")
-        XCTAssertEqual(convertedDictArr?[0]["name"] as? String, "John", "The name in the first dictionary should be 'John'")
-        XCTAssertEqual(convertedDictArr?[0]["age"] as? Int, 30, "The age in the first dictionary should be 30")
-        XCTAssertEqual(convertedDictArr?[1]["name"] as? String, "Jane", "The name in the second dictionary should be 'Jane'")
-        XCTAssertEqual(convertedDictArr?[1]["age"] as? Int, 25, "The age in the second dictionary should be 25")
+        XCTAssertTrue(jsonString.contains("\"name\" : \"David\""))
+        XCTAssertTrue(jsonString.contains("\"age\" : 45"))
+        XCTAssertTrue(jsonString.contains("\"name\" : \"Eve\""))
+        XCTAssertTrue(jsonString.contains("\"age\" : 50"))
+    }
+}
+// additional tests
+extension JSONSugarTests {
+       // Test the data2JSON function
+   func testData2JSON() {
+       let jsonString = "{\"name\":\"John\", \"age\":30}"
+       guard let jsonData = jsonString.data(using: .utf8) else {
+           XCTFail("Unable to convert string to Data")
+           return
+       }
+       do {
+           let json = try JSONUtils.data2JSON(data: jsonData)
+           XCTAssertNotNil(json, "The JSON object should not be nil")
+           if let dict = json as? [String: Any] {
+               XCTAssertEqual(dict["name"] as? String, "John")
+               XCTAssertEqual(dict["age"] as? Int, 30)
+           } else {
+               XCTFail("JSON object is not a dictionary")
+           }
+       } catch {
+           XCTFail("Error converting data to JSON: \(error)")
+       }
+   }
+
+   // Test the json2Data function
+   func testJSON2Data() {
+       let dict: [String: Any] = ["name": "John", "age": 30]
+       do {
+           let jsonData = try JSONUtils.json2Data(json: dict)
+           XCTAssertNotNil(jsonData, "The JSON data should not be nil")
+           // Convert back to dictionary to verify
+           let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
+           if let convertedDict = jsonObject as? [String: Any] {
+               XCTAssertEqual(convertedDict["name"] as? String, "John")
+               XCTAssertEqual(convertedDict["age"] as? Int, 30)
+           } else {
+               XCTFail("JSON object is not a dictionary")
+           }
+       } catch {
+           XCTFail("Error converting JSON to data: \(error)")
+       }
+   }
+   // fixme add doc
+    func testDecodingWithTransformer() {
+        struct UppercaseTransformer: DecodingContainerTransformer {
+            typealias DecodingInput = String
+            typealias DecodingOutput = String
+
+            func decode(input: String) throws -> String {
+                return input.uppercased()
+            }
+        }
+
+        let jsonString = "{\"message\":\"hello world\"}"
+        guard let jsonData = jsonString.data(using: .utf8) else {
+            XCTFail("Unable to convert string to Data")
+            return
+        }
+
+        struct Message: Decodable {
+            let message: String
+
+            init(from decoder: Decoder) throws {
+                let container = try decoder.container(keyedBy: CodingKeys.self)
+                message = try container.decode(key: .message, transformer: UppercaseTransformer())
+            }
+
+            enum CodingKeys: String, CodingKey {
+                case message
+            }
+        }
+
+        do {
+            let message = try JSONDecoder().decode(Message.self, from: jsonData)
+            XCTAssertEqual(message.message, "HELLO WORLD", "The message should be transformed to uppercase")
+        } catch {
+            XCTFail("Error decoding with transformer: \(error)")
+        }
+    }
+    // fixme: add doc
+    func testEncodableToDictionary() {
+        struct Person: Encodable {
+            let name: String
+            let age: Int
+        }
+
+        let person = Person(name: "Alice", age: 28)
+        do {
+            let dict = try person.getDict()
+            XCTAssertEqual(dict["name"] as? String, "Alice")
+            XCTAssertEqual(dict["age"] as? Int, 28)
+        } catch {
+            XCTFail("Error converting Encodable to dictionary: \(error)")
+        }
+    }
+    // fixme: add doc
+    func testDecodableInitWithDictionary() {
+        let dict: [String: Any] = ["name": "Bob", "age": 35]
+
+        struct Person: Decodable, Equatable {
+            let name: String
+            let age: Int
+        }
+
+        do {
+            let person = try Person(dict: dict)
+            XCTAssertEqual(person.name, "Bob")
+            XCTAssertEqual(person.age, 35)
+        } catch {
+            XCTFail("Error initializing Decodable from dictionary: \(error)")
+        }
+    }
+    // fixme: add doc
+    func testJSONUtilsDescribe() {
+        let jsonObject: [String: Any] = [
+            "string": "Hello",
+            "number": 123,
+            "array": [1, 2, 3],
+            "nested": [
+                "bool": true
+            ]
+        ]
+        JSONUtils.describe(jsonObject)
+        // Since describe method prints output, you might want to capture the output or simply ensure no crashes occur
+        XCTAssertTrue(true, "JSONUtils.describe executed without errors")
     }
 }

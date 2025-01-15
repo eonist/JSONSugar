@@ -20,11 +20,11 @@ extension JSONType {
     */
    public static func type(_ json: Any?) -> JSONType? {
       switch true {
-      case JSONAsserter.isStr(json): return .str // If the JSON object is a String, return .str
-      case JSONAsserter.isInt(json): return .int // If the JSON object is an Int, return .int
-      case JSONAsserter.isDict(json): return .dict // If the JSON object is a Dictionary, return .dict
-      case JSONAsserter.isDictArr(json): return .dictArr // If the JSON object is an array of dictionaries, return .dictArr
-      case JSONAsserter.isArr(json): return .arr // If the JSON object is an array, return .arr
+      case JSONAsserter.isString(json): return .str // If the JSON object is a String, return .str
+      case JSONAsserter.isInteger(json): return .int // If the JSON object is an Int, return .int
+      case JSONAsserter.isDictionary(json): return .dict // If the JSON object is a Dictionary, return .dict
+      case JSONAsserter.isDictionaryArray(json): return .dictArr // If the JSON object is an array of dictionaries, return .dictArr
+      case JSONAsserter.isArray(json): return .arr // If the JSON object is an array, return .arr
       default:
          Swift.print("Type not supported: \(Swift.type(of: json))") // If the JSON object is not supported, print an error message
          return nil
