@@ -303,7 +303,12 @@ extension JSONSugarTests {
            XCTFail("Error converting JSON to data: \(error)")
        }
    }
-   // fixme add doc
+   /**
+    * Tests decoding JSON with a custom transformer that converts string values to uppercase.
+    *
+    * This test verifies that the `JSONDecoder` correctly decodes a JSON string into a `Message` struct,
+    * applying the `UppercaseTransformer` to transform the message to uppercase.
+    */
     func testDecodingWithTransformer() {
         struct UppercaseTransformer: DecodingContainerTransformer {
             typealias DecodingInput = String
@@ -340,7 +345,12 @@ extension JSONSugarTests {
             XCTFail("Error decoding with transformer: \(error)")
         }
     }
-    // fixme: add doc
+    /**
+     * Tests converting an `Encodable` object to a dictionary.
+     *
+     * This test ensures that the `getDict` method correctly transforms an `Encodable` struct
+     * into a `[String: Any]` dictionary and verifies the dictionary's contents match the original object.
+     */
     func testEncodableToDictionary() {
         struct Person: Encodable {
             let name: String
@@ -356,7 +366,12 @@ extension JSONSugarTests {
             XCTFail("Error converting Encodable to dictionary: \(error)")
         }
     }
-    // fixme: add doc
+    /**
+     * Tests initializing a `Decodable` object from a dictionary.
+     *
+     * This test verifies that a `Decodable` struct can be correctly initialized with a `[String: Any]` dictionary
+     * and that the resulting object's properties match the dictionary's values.
+     */
     func testDecodableInitWithDictionary() {
         let dict: [String: Any] = ["name": "Bob", "age": 35]
 
@@ -373,7 +388,12 @@ extension JSONSugarTests {
             XCTFail("Error initializing Decodable from dictionary: \(error)")
         }
     }
-    // fixme: add doc
+    /**
+     * Tests the `JSONUtils.describe` function with a sample JSON object.
+     *
+     * This test ensures that the `describe` method executes without errors when provided with a valid JSON object.
+     * It uses a sample JSON containing various data types and verifies that the method runs successfully.
+     */
     func testJSONUtilsDescribe() {
         let jsonObject: [String: Any] = [
             "string": "Hello",

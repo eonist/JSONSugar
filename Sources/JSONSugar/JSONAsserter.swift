@@ -49,7 +49,8 @@ public final class JSONAsserter {
       JSONParser.int(json) != nil
    }
 }
-// fixme: add doc
+/// Extension of `JSONAsserter` providing additional assertion methods.
+/// This extension includes methods to verify specific JSON structures and types.
 extension JSONAsserter {
    
    /**
